@@ -1,0 +1,472 @@
+\section{Tables}
+\begin{landscape}
+\begin{table}[]
+\caption{Summary of the literature: Effect of financialization and speculation on volatility}
+\label{tab:fin}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{References}                   & \textbf{Proxy used for financialization or speculation}          & \textbf{Impact on volatility}      \\ \midrule
+\citet{chang1997interday}  & CFTC’s definition of speculators                                 & \multirow{4}{*}{\textbf{Positive}} \\
+\citet{daigler1999impact}              & CFTC’s definition of speculators                                 &                                    \\
+\citet{irwin2004effect}                 & Set speculators                                                  &                                    \\
+\citet{tang2012index}                  & Commodity index trader (CIT) positions                           &                                    \\ \midrule
+\citet{irwin1987note}             & Amount of money invested in traded futures funds                 & \multirow{4}{*}{\textbf{Neutral}}  \\
+\citet{irwin1999managed}            & Trading volume of large-commodity pool operators                 &                                    \\
+\citet{bryant2006causality}     & CFTC’s definition of speculators                                 &                                    \\
+\citet{haigh2007hedge} & Number and positions of commodity pool operators and hedge funds &                                    \\ \midrule
+\citet{brunetti2016speculators} & The net positions of hedge funds and floor brokers & \multirow{2}{*}{\textbf{Negative}} \\
+\citet{aulerich2012bubbles}     & Commodity index trader (CIT) positions                           &                                    \\ \bottomrule
+\end{tabular}
+\end{table}
+\end{landscape}
+
+\begin{table}[] 
+\begin{center}
+\caption{Details of the macroeconomics announcements used in the study}
+\label{tab:stat1}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\multicolumn{1}{c}{\textbf{Announcement}} & \textbf{Frequency} & \textbf{Source*} & \textbf{Unit}     & \textbf{Time} \\ \midrule
+\textbf{GDP advance}                      & Quarterly          & BEA             & \%                & 8:30          \\
+\textbf{GDP preliminary}                  & Quarterly          & BEA             & \%                & 8:30          \\
+\textbf{GDP final}                        & Quarterly          & BEA             & \%                & 8:30          \\
+\textbf{Personal income}                  & Monthly            & BEA             & \%                & 8:30          \\
+\textbf{ADP employment}                   & Monthly            & ADP             & Number of jobs    & 8:15          \\
+\textbf{Initial jobless claims}           & Weekly             & ETA             & Number of claims  & 8:30          \\
+\textbf{Non-farm employment}              & Monthly            & BLS             & Number of jobs    & 8:30          \\
+\textbf{Factory orders}                   & Monthly            & BC              & \%                & 10:00         \\
+\textbf{Industrial production}            & Monthly            & FRB             & \%                & 9:15          \\
+\textbf{Construction spending}            & Monthly            & BC              & \%                & 10:00         \\
+\textbf{Durable goods orders}             & Monthly            & BC              & \%                & 8:30          \\
+\textbf{Advance retail sales}             & Monthly            & BC              & \%                & 8:30          \\
+\textbf{Consumer credit}                  & Monthly            & FRB             & USD               & 15:00         \\
+\textbf{Personal consumption}             & Monthly            & BEA             & \%                & 8:30          \\
+\textbf{Building permits}                 & Monthly            & BC              & Number of permits & 8:30          \\
+\textbf{Existing home sales}              & Monthly            & NAR             & Number of homes   & 10:00         \\
+\textbf{Housing starts}                   & Monthly            & BC              & Number of homes   & 8:30          \\
+\textbf{New home sales}                   & Monthly            & BC              & Number of homes   & 10:00         \\
+\textbf{Pending home sales}               & Monthly            & NAR             & \%                & 10:00         \\
+\textbf{Trade balance}                    & Monthly            & BEA             & USD               & 8:30          \\
+\textbf{Consumer price index}             & Monthly            & BLS             & \%                & 8:30          \\
+\textbf{Producer price index}             & Monthly            & BLS             & \%                & 8:30          \\
+\textbf{CB Consumer confidence index}     & Monthly            & CB              & Index             & 10:00         \\
+\textbf{UM Consumer sentiment}            & Monthly            & TR/UM           & Index             & 9:55          \\ \bottomrule
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+        \singlespacing
+        \footnotesize
+Shows the category, frequency, source, unit of measure, and release time for each macroeconomic announcements.  *(Automatic Data Processing, Inc. (ADP), Bureau of the Census (BC), Bureau of Economic Analysis (BEA), Bureau of Labor Statistics (BLS), Conference Board (CB), Employment and Training Administration (ETA), Federal Reserve Board (FRB), Institute for Supply Management (ISM), National Association of Realtors (NAR), Thomson Reuters/University of Michigan (TR/UM), and U.S. Department of the Treasury (USDT).)
+\end{tablenotes}
+\end{table}
+
+
+\begin{landscape}
+\begin{table}[]
+\begin{center}
+\caption{Descriptive statistics: Standardized surprises for each of the macroeconomic announcements.}
+\label{tab:stat2}
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+\multicolumn{1}{c}{\textbf{Announcements}} & \textbf{Nb. Obs.} & \textbf{Min.} & \textbf{1st Qu.} & \textbf{Med.} & \textbf{Mean} & \textbf{3rd Qu.} & \textbf{Max.} \\ \midrule
+\textbf{Initial jobless claims}            & 672                      & -3.117        & -0.059           & 0.000           & 0.076         & 0.066            & 20.746        \\
+\textbf{ADP Employment}                    & 154                      & -2.549        & -0.040           & 0.005           & 0.054         & 0.070            & 11.931        \\
+\textbf{CB Consumer}                       & 155                      & -2.590        & -0.638           & -0.018          & 0.053         & 0.821            & 2.371         \\
+\textbf{Advance retail sales}              & 154                      & -4.458        & -0.304           & -0.051          & -0.025        & 0.203            & 9.828         \\
+\textbf{Building permit}                   & 155                      & -2.065        & -0.589           & 0.000           & 0.117         & 0.743            & 3.496         \\
+\textbf{Construction spending}             & 155                      & -2.884        & -0.698           & -0.093          & -0.155        & 0.372            & 4.093         \\
+\textbf{Consumer\_credit}                  & 154                      & -6.213        & -0.511           & 0.116           & 0.010         & 0.588            & 1.741         \\
+\textbf{Consumer price index}              & 155                      & -3.799        & -0.760           & 0.000           & -0.152        & 0.000            & 3.039         \\
+\textbf{Durable goods orders}              & 161                      & -3.479        & -0.467           & 0.042           & 0.051         & 0.551            & 6.406         \\
+\textbf{Existing home sales}               & 155                      & -4.586        & -0.449           & 0.000           & 0.007         & 0.598            & 2.393         \\
+\textbf{Factory orders}                    & 153                      & -2.978        & -0.496           & 0.000           & 0.015         & 0.496            & 2.647         \\
+\textbf{GDP}                               & 153                      & -2.861        & -0.204           & 0.000           & 0.088         & 0.409            & 4.292         \\
+\textbf{Housing starts}                    & 154                      & -2.389        & -0.708           & -0.028          & -0.037        & 0.514            & 3.556         \\
+\textbf{Industrial production}             & 291                      & -4.486        & -0.641           & -0.214          & -0.186        & 0.427            & 2.563         \\
+\textbf{Michigan Sentiment Index}          & 155                      & -3.271        & -0.414           & 0.075           & -0.021        & 0.508            & 2.519         \\
+\textbf{New home sales}                    & 154                      & -3.374        & -0.394           & -0.066          & 0.018         & 0.482            & 2.914         \\
+\textbf{Non-farm employment}               & 155                      & -0.690        & -0.053           & -0.001          & 0.094         & 0.056            & 12.069        \\
+\textbf{Pending home sales}                & 155                      & -3.905        & -0.413           & 0.000           & 0.034         & 0.558            & 5.669         \\
+\textbf{Personal consumption}              & 154                      & -9.063        & -0.363           & 0.000           & -0.131        & 0.363            & 2.538         \\
+\textbf{Personal income}                   & 154                      & -4.828        & -0.241           & 0.000           & -0.036        & 0.241            & 10.380        \\
+\textbf{Producer price index}              & 155                      & -3.138        & -0.571           & 0.000           & 0.011         & 0.571            & 2.853         \\
+\textbf{Trade balance}                     & 154                      & -3.010        & -0.417           & -0.027          & 0.036         & 0.466            & 3.878         \\ \bottomrule
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+        \singlespacing
+        \footnotesize
+In this table, we present some descriptive statistics of the standardized surprise for each of the macroeconomic announcements. The column (Nb. Observations) shows the number of individual surprises that can be calculated over the whole analysis period. The columns (Min.), (1st Qu.), (Median), (Mean), (3rd Qu.) and (Max) present respectively the minimum value, the first quartile, the median, the mean, the third quartile and the maximum value for the standardized surprise of each macroeconomic announcement 
+\end{tablenotes}
+\end{table}
+\end{landscape}
+
+\begin{landscape}
+\begin{table}[]
+\begin{center}
+\caption{Details of the commodity futures contracts in the study}
+\label{tab:stat3}
+\begin{tabular}{lclll}
+\hline
+\multicolumn{1}{c}{\textbf{Commodity name}} & \textbf{Commodity Ticker} & \multicolumn{1}{c}{\textbf{Commodity Exchange}} & \multicolumn{1}{c}{\textbf{Price quotation}} & \multicolumn{1}{c}{\textbf{Contract unit}} \\ \hline
+\textbf{Crude Oil}                          & CL                        & New York Mercantile Exchange                    & U.S. dollars and cents per barrel            & 1,000 barrels                              \\
+\textbf{Gold}                               & GC                        & Commodity Exchange Inc.                         & U.S. dollars and cents per troy ounce        & 100 troy ounces                            \\
+\textbf{Copper}                             & HG                        & Commodity Exchange Inc.                         & U.S. dollars and cents per pound             & 25,000 pounds                              \\
+\textbf{Natural Gas}                        & NG                        & New York Mercantile Exchange                    & U.S. dollars and cents per MMBtu             & 10,000 MMBtu                               \\
+\textbf{Palladium}                          & PA                        & New York Mercantile Exchange                    & U.S. dollars and cents per troy ounce        & 100 troy ounces                            \\
+\textbf{Silver}                             & SI                        & Commodity Exchange Inc.                         & U.S. dollars and cents per troy ounce        & 5,000 troy ounces                          \\ \hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+        \singlespacing
+        \footnotesize
+This table presents information about the futures contracts of the 6 selected commodities: Crude Oil, Gold, (High-Grade) Copper, Natural Gas, Palladium and Silver. For each commodity, the commodity ticker, commodity exchange, price quotation and contract unit are presented.
+\end{tablenotes}
+\end{table}
+\end{landscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\begin{table}[]
+\begin{center}
+\caption{Descriptive statistics: 5-minute intraday futures price returns}
+\label{tab:stat4}
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+\textbf{Commodity Futures}  & \textbf{Min (\%)} & \textbf{1st Qu. (\%)} & \textbf{Med. (\%)} & \textbf{Mean (\%)} & \textbf{3rd Qu. (\%)} & \textbf{Max (\%)} \\ \midrule
+\textbf{Crude Oil (CL=F)}   & -33.9081          & -0.0441               & 0.00               & 0.00             & 0.0447                & 41.64134        \\
+\textbf{Gold (GC=F)}        & -2.7822           & -0.0241               & 0.00               & 0.0001             & 0.0244                & 3.0641         \\
+\textbf{Copper (HG=F)}      & -4.534           & -0.0363               & 0.00               & -0.0001            & 0.0365                & 8.877         \\
+\textbf{Natural Gas (NG=F)} & -6.735           & -0.0528               & 0.00               & -0.0003            & 0.0532                & 15.62        \\
+\textbf{Palladium (PA=F)}   & -13.35          & -0.034               & 0.00               & 0.0001             & 0.0348                & 9.467         \\
+\textbf{Silver (SI=F)}      & -7.504           & -0.0394               & 0.00               & 0.0001             & 0.0415                & 4.242         \\ \bottomrule
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+        \singlespacing
+        \footnotesize
+Shows descriptive statistics of the 5-minute intraday returns, for each commodity futures. The columns (Min.), (1st Qu.), (Median), (Mean), (3rd Qu.) and (Max) present respectively the minimum value, the first quartile, the median, the mean, the third quartile and the maximum value for the 5 minute intraday returns.
+\end{tablenotes}
+\end{table}
+\end{landscape}
+
+
+
+\begin{landscape}
+\begin{table}[]
+\begin{center}
+\caption{Descriptive statistics: MSCT, NLS and Working's T financialization variables}
+\label{tab:stat5}
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+                 & \textbf{CL} & \textbf{GC} & \textbf{HG} & \textbf{SI} & \textbf{PA} & \textbf{NG} \\ \midrule
+\multicolumn{7}{c}{\textbf{MSCT}}                                                                    \\ \midrule
+\textbf{Min.}    & 0.062945    & 0.165982    & 0.122262    & 0.155190    & 0.058447    & 0.037411    \\
+\textbf{1st Qu.} & 0.147171    & 0.270250    & 0.234365    & 0.207841    & 0.362742    & 0.129146    \\
+\textbf{Median}  & 0.165226    & 0.305187    & 0.282629    & 0.252736    & 0.406176    & 0.234401    \\
+\textbf{Mean}    & 0.164179    & 0.304460    & 0.291516    & 0.260574    & 0.391650    & 0.216984    \\
+\textbf{3rd Qu.} & 0.185501    & 0.341228    & 0.353014    & 0.307877    & 0.438621    & 0.272414    \\
+\textbf{Max.}    & 0.243133    & 0.450365    & 0.496837    & 0.459285    & 0.595550    & 0.402280    \\ \midrule
+\multicolumn{7}{c}{\textbf{NLS}}                                                                     \\ \midrule
+\textbf{Min.}    & -0.112938   & -0.082052   & -0.323828   & -0.136418   & -0.350847   & -0.274505   \\
+\textbf{1st Qu.} & 0.035834    & 0.228504    & -0.106675   & 0.154751    & 0.318095    & -0.173095   \\
+\textbf{Median}  & 0,108400    & 0,330220    & 0,017086    & 0,245223    & 0,453227    & -0,081458   \\
+\textbf{Mean}    & 0,110749    & 0,309760    & 0,020385    & 0,242498    & 0,421290    & -0,094391   \\
+\textbf{3rd Qu.} & 0.183409    & 0.401171    & 0.141731    & 0.333416    & 0.565189    & -0.032108   \\
+\textbf{Max.}    & 0.294144    & 0.526856    & 0.441333    & 0.574770    & 0.734284    & 0.079358    \\ \midrule
+\multicolumn{7}{c}{\textbf{Working-T}}                                                               \\ \midrule
+\textbf{Min.}    & 1.021866    & 1.043735    & 1.024398    & 1.014335    & 1.000000    & 1.004389    \\
+\textbf{1st Qu.} & 1.076590    & 1.090740    & 1.152226    & 1.076194    & 1.106552    & 1.131993    \\
+\textbf{Median}  & 1.100555    & 1.140149    & 1.234470    & 1.117848    & 1.155713    & 1.209708    \\
+\textbf{Mean}    & 1.103168    & 1.160994    & 1.254092    & 1.150930    & 1.193110    & 1.237466    \\
+\textbf{3rd Qu.} & 1.124351    & 1.197429    & 1.356929    & 1.188077    & 1.234792    & 1.341500    \\
+\textbf{Max.}    & 1.247876    & 1.663823    & 1.655362    & 1.604836    & 1.938426    & 1.558946    \\ \bottomrule
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+        \singlespacing
+        \footnotesize
+Shows descriptive statistics of the financialization variables, for each commodity futures. The line (Min.), (1st Qu.), (Median), (Mean), (3rd Qu.) and (Max) present respectively the minimum value, the first quartile, the median, the mean, the third quartile and the maximum value for the 5-minute intraday returns.
+\end{tablenotes}
+\end{table}
+
+\end{landscape}
+
+\begin{landscape}
+\begin{table}[]
+\caption{Announcement and financialization effects on futures returns}
+\label{tab:reg_return}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lllllllllllll@{}}
+\toprule
+\textbf{Commodities}              & \multicolumn{2}{c}{\textbf{Crude Oil}}    & \multicolumn{2}{c}{\textbf{Gold}}         & \multicolumn{2}{c}{\textbf{Copper}}       & \multicolumn{2}{c}{\textbf{Natural Gas}}  & \multicolumn{2}{c}{\textbf{Palladium}}    & \multicolumn{2}{c}{\textbf{Silver}}       \\ \midrule
+\textbf{Announcements}            & \textbf{$\gamma_m$} & \textbf{$\theta_m$} & \textbf{$\gamma_m$} & \textbf{$\theta_m$} & \textbf{$\gamma_m$} & \textbf{$\theta_m$} & \textbf{$\gamma_m$} & \textbf{$\theta_m$} & \textbf{$\gamma_m$} & \textbf{$\theta_m$} & \textbf{$\gamma_m$} & \textbf{$\theta_m$} \\ \midrule
+\textbf{Initial jobless claims}   & -0.002***           & 0.010***            & 0.007***            & -0.013***           & -0,0001             & -0,001              & 0,0001              & 0,0004              & 0,0001              & 0,0004              & 0.005***            & -0.022***           \\
+\textbf{ADP Employment}           & 0.007***            & -0.026***           & -0.017***           & 0.035***            & 0.0003***           & 0,001               & -0.001***           & -0.034***           & -0.001***           & -0.034***           & -0.006***           & 0.027***            \\
+\textbf{CB Consumer}              & 0.001***            & -0.005***           & -0.0004***          & 0,0005              & 0,0001              & 0,0004              & 0,0003              & -0,00002            & 0,0003              & -0,00002            & -0.001***           & 0,001               \\
+\textbf{Advance retail sales}     & 0.002***            & -0.008***           & -0.003***           & 0.005***            & 0,0001              & -0,001              & -0,0002             & -0,004              & -0,0002             & -0,004              & -0.001***           & 0.005***            \\
+\textbf{Building permit}          & -0,0001             & 0,001               & -0.0005***          & 0.001***            & 0,0001              & -0,0002             & 0.001**             & 0.004**             & 0.001**             & 0.004**             & -0.001***           & 0.001**             \\
+\textbf{Construction spending}    & 0,0001              & -0,001              & -0.0003*            & 0,001               & -0,00004            & -0.002***           & -0,0003             & -0,001              & -0,0003             & -0,001              & -0,0003             & 0,001               \\
+\textbf{Consumer credit}          & -0,0001             & 0,001               & -0,0001             & 0,0003              & 0,00002             & 0,0001              & -0,0001             & -0,001              & -0,0001             & -0,001              & -0,0001             & 0,001               \\
+\textbf{Consumer price index}     & -0.0005**           & 0,001               & -0.001***           & 0.003***            & -0,0001             & -0.002***           & 0,0004              & 0,002               & 0,0004              & 0,002               & -0.001***           & 0.004***            \\
+\textbf{Durable goods orders}     & 0.002***            & -0.008***           & -0.001***           & 0.002***            & 0.0001**            & 0,0002              & 0,00002             & -0,001              & 0,00002             & -0,001              & -0.001***           & 0,001               \\
+\textbf{Existing home sales}      & 0.001***            & -0.006***           & -0,0002             & 0,001               & 0.0003***           & -0,001              & 0,001               & 0,003               & 0,001               & 0,003               & -0,0003             & 0,001               \\
+\textbf{Factory orders}           & 0,0002              & -0,001              & -0,0001             & -0,0003             & 0,00003             & -0,0001             & 0.001***            & 0.006**             & 0.001***            & 0.006**             & -0,0003             & 0,0003              \\
+\textbf{GDP}                      & 0,0003              & -0,001              & -0.001***           & 0.001***            & 0.0003***           & 0,0002              & -0,0003             & -0.003*             & -0,0003             & -0.003*             & -0.002***           & 0.003***            \\
+\textbf{Housing starts}           & 0.001*              & -0,002              & -0.001***           & 0.001***            & 0,00002             & 0,001               & -0,0003             & 0,0005              & -0,0003             & 0,0005              & -0.001***           & 0,001               \\
+\textbf{Industrial production}    & 0,0003              & -0,001              & -0,00001            & -0,001              & -0,0001             & 0,0001              & 0,0002              & 0,002               & 0,0002              & 0,002               & -0,0001             & -0,001              \\
+\textbf{Michigan Sentiment Index} & 0,0003              & -0,001              & -0,0002             & -0,0002             & 0,0001              & 0,0005              & -0,0003             & -0,002              & -0,0003             & -0,002              & -0.0004***          & 0,0003              \\
+\textbf{New home sales}           & 0.001***            & -0.004**            & -0.001***           & 0.001**             & 0.0003***           & -0.001**            & 0,00003             & -0,001              & 0,00003             & -0,001              & -0.0004*            & -0,0003             \\
+\textbf{Non-farm employment}      & 0.035***            & -0.132***           & -0.045***           & 0.098***            & -0,0001             & -0,001              & -0.003***           & -0.088***           & -0.003***           & -0.088***           & -0.009***           & 0.040***            \\
+\textbf{Pending home sales}       & 0.001***            & -0.004***           & -0,0002             & 0,0001              & 0.0003***           & -0,001              & -0,00002            & -0,003              & -0,00002            & -0,003              & -0,00001            & -0,001              \\
+\textbf{Personal consumption}     & 0,0002              & -0,0005             & -0.0003**           & 0.001**             & 0,00001             & 0,0001              & -0,0001             & 0,0001              & -0,0001             & 0,0001              & 0.0002*             & -0,001              \\
+\textbf{Personal income}          & 0.006***            & -0.026***           & -0.008***           & 0.017***            & -0.0003**           & -0.002*             & -0,0005             & -0.011***           & -0,0005             & -0.011***           & -0.002***           & 0.010***            \\
+\textbf{Producer price index}     & 0.0004**            & -0.003**            & -0.001***           & 0.002***            & -0,00004            & -0,0004             & -0,0004             & -0,002              & -0,0004             & -0,002              & -0,0002             & -0,0001             \\
+\textbf{Trade balance}            & -0,0001             & 0,0004              & -0.001***           & 0.002***            & -0,00004            & -0,001              & -0,0001             & -0,002              & -0,0001             & -0,002              & -0,0003             & 0,002               \\ \midrule
+\textbf{$R^2$}                    & \multicolumn{2}{c}{0,001}                 & \multicolumn{2}{c}{0,002}                 & \multicolumn{2}{c}{0,0003}                & \multicolumn{2}{c}{0,0004}                & \multicolumn{2}{c}{0,0004}                & \multicolumn{2}{c}{0,001}                 \\
+\textbf{Observations}             & \multicolumn{2}{c}{971826}                & \multicolumn{2}{c}{968141}                & \multicolumn{2}{c}{916716}                & \multicolumn{2}{c}{880054}                & \multicolumn{2}{c}{880054}                & \multicolumn{2}{c}{959102}                \\ \bottomrule
+\end{tabular}%
+}
+
+\begin{tablenotes}
+        \singlespacing
+        \footnotesize
+Presents the estimates of eq. \ref{eq:Model 1}, using the method proposed by \citep{kurov2019price} and financialization variable $X_{t,2}=NLS_t$. The $\gamma_m$ coefficients capture the instantaneous change in return when an announcement has just occurred and especially if that announcement was unanticipated. The coefficients $\theta_m$ capture the instantaneous change in return when an announcement has just occurred in conjunction with the level of financialization.
+
+    \end{tablenotes}
+\end{table}
+\end{landscape}
+
+\begin{landscape}
+\begin{table}[]
+\caption{ Announcement and financialization effects on futures conditional variance}
+\label{tab:reg_vol}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lllllllllllll@{}}
+\toprule
+\textbf{Commodities}              & \multicolumn{2}{c}{\textbf{Crude Oil}} & \multicolumn{2}{c}{\textbf{Gold}}     & \multicolumn{2}{c}{\textbf{Copper}}   & \multicolumn{2}{c}{\textbf{Natural Gas}} & \multicolumn{2}{c}{\textbf{Palladium}} & \multicolumn{2}{c}{\textbf{Silver}}   \\ \midrule
+\textbf{Announcements}            & \textbf{$\Phi_m$}  & \textbf{$\phi_m$} & \textbf{$\Phi_m$} & \textbf{$\phi_m$} & \textbf{$\Phi_m$} & \textbf{$\phi_m$} & \textbf{$\Phi_m$}   & \textbf{$\phi_m$}  & \textbf{$\Phi_m$}  & \textbf{$\phi_m$} & \textbf{$\Phi_m$} & \textbf{$\phi_m$} \\ \midrule
+\textbf{Initial jobless claims}   & 0.001***           & -0.003***         & 0.0003***         & 0,0002            & 0.0002***         & -0,0003           & -0.0003***          & -0,0003            & 0.001***           & -0.002***         & 0.001***          & -0.001***         \\
+\textbf{ADP Employment}           & 0,0003             & -0,002            & 0.001***          & -0.001***         & 0.0002***         & -0,00002          & 0,0002              & 0,0005             & -0.001**           & 0.001*            & 0.001***          & -0,0002           \\
+\textbf{CB Consumer}              & 0.001***           & -0.004**          & 0.0003**          & -0,0002           & 0.0003***         & -0.001**          & -0,00002            & 0,0001             & 0,0003             & -0,0003           & 0.0004**          & 0                 \\
+\textbf{Advance retail sales}     & 0.002***           & -0.008***         & 0.001***          & -0.001*           & 0.0003***         & -0.002***         & 0.001***            & 0.003**            & -0,0003            & 0,001             & 0.001***          & 0,001             \\
+\textbf{Building permit}          & 0,0002             & -0,003            & 0.001**           & -0.002**          & -0,0001           & 0,0004            & 0,0001              & -0,002             & 0.015***           & -0.026***         & 0,001             & -0,003            \\
+\textbf{Construction spending}    & 0.001***           & -0.005***         & 0.001***          & -0.001***         & 0.0004***         & -0.002***         & -0.0003*            & -0.004***          & 0.001*             & -0,0003           & 0.001***          & -0,001            \\
+\textbf{Consumer credit}          & 0.0005*            & -0,003            & 0,0001            & -0,0001           & 0,0001            & 0,0005            & 0                   & 0,00003            & -0,001             & 0,001             & 0,0002            & -0,0001           \\
+\textbf{Consumer price index}     & 0,0002             & -0,001            & 0.001***          & -0,0005           & 0,00003           & 0,0002            & 0,00002             & 0,0003             & -0,0003            & 0,001             & 0.001***          & -0,0001           \\
+\textbf{Durable goods orders}     & 0.001***           & -0.003**          & 0,0001            & 0                 & -0,00001          & -0,0003           & -0,00003            & -0,001             & 0,0004             & -0,0001           & -0,00001          & 0,001             \\
+\textbf{Existing home sales}      & 0,0004             & 0,00004           & 0.0002*           & 0,0004            & 0.0002***         & -0.002***         & 0,0001              & -0,001             & 0.002***           & -0.003***         & 0.0004**          & -0,0002           \\
+\textbf{Factory orders}           & 0.001***           & -0.003**          & -0,0001           & 0.001***          & 0.0002***         & -0.001***         & -0.0004**           & -0.006***          & 0.001***           & -0.002**          & -0,0001           & 0.002**           \\
+\textbf{GDP}                      & 0.001***           & -0.005***         & 0.0003**          & 0,0003            & 0.0002***         & 0,0003            & -0.0005**           & -0.003*            & 0.001**            & -0.001*           & 0.001***          & -0,0002           \\
+\textbf{Housing starts}           & 0,001              & -0,002            & -0.001*           & 0.002*            & 0,0002            & -0,001            & -0,0002             & 0,001              & -0.015***          & 0.026***          & -0,0002           & 0,001             \\
+\textbf{Industrial production}    & 0.001***           & -0.008***         & 0.0002**          & 0,00002           & 0,0001            & -0,001            & -0,0003             & -0,001             & 0.001***           & -0.002***         & 0.0003*           & -0,0001           \\
+\textbf{Michigan Sentiment Index} & 0,0003             & -0,001            & -0.0002**         & 0.001***          & 0,00002           & 0,0002            & -0,0001             & 0,001              & 0,0002             & -0,0001           & 0,00005           & 0.001*            \\
+\textbf{New home sales}           & 0.001***           & -0.005***         & 0.0004***         & 0,0001            & 0.0002***         & 0,0003            & -0,0002             & -0,001             & 0.001***           & -0.002***         & 0.0004**          & 0,001             \\
+\textbf{Non-farm employment}      & 0.004***           & -0.019***         & 0.004***          & -0.004***         & 0.001***          & -0.006***         & -0,0005             & -0.015***          & 0.002***           & -0,001            & 0.003***          & 0,001             \\
+\textbf{Pending home sales}       & 0.001**            & -0.003*           & 0.0002*           & -0,0003           & 0.0003***         & 0,0003            & -0,0002             & -0.003*            & 0.001***           & -0.002**          & 0,0002            & 0,001             \\
+\textbf{Personal consumption}     & -0,0003            & 0,002             & 0,0001            & 0,0001            & -0,0001           & 0,0004            & -0,0004             & -0.005***          & 0.001*             & -0,001            & -0,00002          & 0,001             \\
+\textbf{Personal income}          & 0,001              & 0,004             & -0.001***         & 0.005***          & 0.0005***         & 0.006***          & 0.001***            & 0.014***           & -0.001*            & 0.002*            & 0.001**           & -0.004***         \\
+\textbf{Producer price index}     & 0,0002             & 0,0002            & -0,0001           & 0.001**           & -0,00004          & 0,0003            & 0                   & -0,001             & 0.001**            & -0,0003           & 0.001***          & -0,001            \\
+\textbf{Trade balance}            & 0,0004             & -0,0001           & -0.001***         & 0.004***          & -0.0002***        & 0,001             & 0,0002              & 0,002              & 0,001              & -0,001            & -0.001***         & 0.006***          \\ \bottomrule
+\end{tabular}%
+}
+
+\begin{tablenotes}
+        \singlespacing
+        \footnotesize
+        Presents the estimate of eq. \ref{eq:Variance} using financialization variable $X_{2,t}=NLS_t$. The $\Phi_m$ coefficients capture the instantaneous change in the conditional variance when an announcement has just occurred. The $\phi_m$ coefficients capture the conditional variance when an announcement has just occurred in conjunction with the level of financialization.
+
+    \end{tablenotes}
+    
+\end{table}
+\end{landscape}
+
+
+\begin{landscape}
+\begin{table}[]
+\caption{Announcement and financialization effects on futures returns, with an alternative financialization variable built with the position of the money managers }
+\label{tab:reg_ret_mm}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lllllllllllll@{}}
+\toprule
+\textbf{Commodities}              & \multicolumn{2}{c}{\textbf{Crude Oil}}                                            & \multicolumn{2}{c}{\textbf{Gold}}                                                 & \multicolumn{2}{c}{\textbf{Copper}}                                               & \multicolumn{2}{c}{\textbf{Natural Gas}}                                          & \multicolumn{2}{c}{\textbf{Palladium}}                                            & \multicolumn{2}{c}{\textbf{Silver}}                                               \\ \midrule
+\textbf{Announcements}            & \multicolumn{1}{c}{\textbf{$\gamma_m$}} & \multicolumn{1}{c}{\textbf{$\theta_m$}} & \multicolumn{1}{c}{\textbf{$\gamma_m$}} & \multicolumn{1}{c}{\textbf{$\theta_m$}} & \multicolumn{1}{c}{\textbf{$\gamma_m$}} & \multicolumn{1}{c}{\textbf{$\theta_m$}} & \multicolumn{1}{c}{\textbf{$\gamma_m$}} & \multicolumn{1}{c}{\textbf{$\theta_m$}} & \multicolumn{1}{c}{\textbf{$\gamma_m$}} & \multicolumn{1}{c}{\textbf{$\theta_m$}} & \multicolumn{1}{c}{\textbf{$\gamma_m$}} & \multicolumn{1}{c}{\textbf{$\theta_m$}} \\ \midrule
+\textbf{Initial jobless claims}   & -0,0003                                 & 0,0002                                  & 0.003***                                & -0.009***                               & -0.0002**                               & -0,0010                                 & 0,0001                                  & 0,0010                                  & -0.001***                               & 0.007***                                & -0,0010                                 & 0.005**                                 \\
+\textbf{ADP Employment}           & 0.007***                                & -0.033***                               & 0,0002                                  & -0,0020                                 & 0.0003***                               & 0,0010                                  & -0.0003*                                & -0,0100                                 & 0,0003                                  & -0.003*                                 & -0,0003                                 & -0,0020                                 \\
+\textbf{CB Consumer}              & 0.001***                                & -0.006*                                 & -0.0003***                              & -0,0001                                 & 0,0001                                  & 0,0003                                  & 0.0003*                                 & 0,0010                                  & -0.001*                                 & 0,0010                                  & -0.0005***                              & 0,0010                                  \\
+\textbf{Advance retail sales}     & 0.002***                                & -0.010***                               & -0.001***                               & 0,0001                                  & 0,0001                                  & -0,0010                                 & 0,0000                                  & -0,0010                                 & 0,0001                                  & -0,0010                                 & -0.001***                               & 0.006***                                \\
+\textbf{Building permit}          & -0,0001                                 & 0,0010                                  & -0.0003***                              & 0.001*                                  & 0,0001                                  & -0,0001                                 & 0,0002                                  & 0,0010                                  & 0,0003                                  & -0.001**                                & -0.0004***                              & 0.001*                                  \\
+\textbf{Construction spending}    & 0,0003                                  & -0,0030                                 & -0.0004***                              & 0.001***                                & 0,0000                                  & -0.001**                                & -0,0001                                 & -0,0010                                 & 0,0010                                  & -0,0010                                 & -0,0003                                 & 0,0010                                  \\
+\textbf{Consumer credit}          & -0,0001                                 & 0,0010                                  & -0,0001                                 & 0,0003                                  & 0,0000                                  & 0,0001                                  & 0,0000                                  & -0,0004                                 & 0,0003                                  & -0,0010                                 & -0,0001                                 & 0,0010                                  \\
+\textbf{Consumer price index}     & -0.001**                                & 0,0020                                  & -0.001***                               & 0.002***                                & 0,0000                                  & -0.001*                                 & 0,0002                                  & 0,0010                                  & 0.001***                                & -0.002***                               & -0.001***                               & 0.003***                                \\
+\textbf{Durable goods orders}     & 0.001***                                & -0.007***                               & -0.001***                               & 0.002***                                & 0.0002**                                & -0,0004                                 & 0,0001                                  & 0,0003                                  & -0,0005                                 & 0.002**                                 & -0.0005***                              & 0,0010                                  \\
+\textbf{Existing home sales}      & 0.001***                                & -0.007**                                & -0,0001                                 & 0,0003                                  & 0.0003***                               & -0,0001                                 & 0,0001                                  & 0,0010                                  & -0,0010                                 & 0,0010                                  & -0,0001                                 & 0,0010                                  \\
+\textbf{Factory orders}           & -0,0003                                 & 0,0020                                  & -0,0001                                 & -0,0010                                 & 0,0001                                  & -0,0002                                 & 0.0004*                                 & 0,0030                                  & 0,0000                                  & -0,0003                                 & -0,0003                                 & 0,0004                                  \\
+\textbf{GDP}                      & 0,0004                                  & -0,0020                                 & -0.001***                               & -0,0005                                 & 0.0003***                               & 0,0001                                  & 0,0000                                  & -0.003*                                 & -0.002***                               & 0.004***                                & -0.001***                               & 0,0010                                  \\
+\textbf{Housing starts}           & -0,0001                                 & 0,0020                                  & -0.0003***                              & 0,0002                                  & 0,0000                                  & 0,0010                                  & -0.0003**                               & 0,0010                                  & -0.0004*                                & 0.001*                                  & -0.0004***                              & 0,0005                                  \\
+\textbf{Industrial production}    & 0,0000                                  & 0,0004                                  & -0,0002                                 & -0,0002                                 & 0,0000                                  & -0,0003                                 & 0,0001                                  & 0.003**                                 & -0.001*                                 & 0,0010                                  & -0,0002                                 & -0,0010                                 \\
+\textbf{Michigan Sentiment Index} & 0,0003                                  & -0,0010                                 & -0.0002***                              & 0,0000                                  & 0,0000                                  & 0,0003                                  & -0,0001                                 & -0,0010                                 & -0.001**                                & 0.001*                                  & -0.0004***                              & 0,0002                                  \\
+\textbf{New home sales}           & 0,0010                                  & -0,0030                                 & -0.0005***                              & 0.001*                                  & 0.0003***                               & -0,0010                                 & 0,0001                                  & -0,0010                                 & -0,0005                                 & 0,0010                                  & -0.0004**                               & -0,0003                                 \\
+\textbf{Non-farm employment}      & 0.022***                                & -0.117***                               & 0,0002                                  & -0,0030                                 & -0,0001                                 & 0,0002                                  & -0,0002                                 & -0.030*                                 & 0.001*                                  & -0.006*                                 & -0.003**                                & 0.019**                                 \\
+\textbf{Pending home sales}       & 0.001***                                & -0.007**                                & -0,0001                                 & -0,0003                                 & 0.0003***                               & -0,0005                                 & 0,0002                                  & -0,0020                                 & -0,0003                                 & 0,0010                                  & -0,0001                                 & -0,0004                                 \\
+\textbf{Personal consumption}     & -0.001*                                 & 0.006**                                 & -0,0001                                 & 0,0003                                  & 0,0000                                  & 0,0003                                  & -0,0001                                 & 0,0010                                  & 0,0004                                  & -0.001*                                 & 0,0001                                  & -0,0010                                 \\
+\textbf{Personal income}          & 0.004***                                & -0.027***                               & -0.002***                               & 0.009***                                & -0.0002**                               & -0.002*                                 & 0,0002                                  & -0.011***                               & 0.0005*                                 & -0.002**                                & -0.001**                                & 0,0030                                  \\
+\textbf{Producer price index}     & 0,0004                                  & -0.003*                                 & -0.001***                               & 0.002***                                & 0,0000                                  & -0,0010                                 & -0,0002                                 & -0,0010                                 & 0,0000                                  & -0,0003                                 & 0,0000                                  & -0,0010                                 \\
+\textbf{Trade balance}            & -0,0001                                 & 0,0010                                  & -0.0004***                              & 0.001**                                 & 0,0000                                  & -0,0004                                 & 0,0001                                  & -0,0010                                 & 0,0001                                  & 0,0000                                  & -0.0003*                                & 0.002**                                 \\ \bottomrule
+\end{tabular}%
+}
+
+\begin{tablenotes}
+        \singlespacing
+        \footnotesize
+       Presents the estimates of eq. \ref{eq:Model 1}, using the method proposed by \citep{kurov2019price} and financialization variable $X_{t,2}=NLS_t$. Only the positions of the money managers are included in the NLS index. The $\gamma_m$ coefficients capture the instantaneous change in return when an announcement has just occurred and especially if that announcement was unanticipated. The coefficients $\theta_m$ capture the instantaneous change in return when an announcement has just occurred in conjunction with the level of financialization.
+For all the regressions estimated in this table, we include the control variable NBER to control for the business cycle. 
+
+
+    \end{tablenotes}
+\end{table}
+\end{landscape}
+
+\begin{landscape}
+\begin{table}[]
+\caption{ Announcement and financialization effects on futures returns, with an alternative financialization variable built with the position of the swap dealers }
+\label{tab:reg_ret_swap}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lllllllllllll@{}}
+\toprule
+\textbf{Commodities}              & \multicolumn{2}{c}{\textbf{Crude Oil}}                                            & \multicolumn{2}{c}{\textbf{Gold}}                                                 & \multicolumn{2}{c}{\textbf{Copper}}                                               & \multicolumn{2}{c}{\textbf{Natural Gas}}                                          & \multicolumn{2}{c}{\textbf{Palladium}}                                            & \multicolumn{2}{c}{\textbf{Silver}}                                               \\ \midrule
+\textbf{Announcements}            & \multicolumn{1}{c}{\textbf{$\gamma_m$}} & \multicolumn{1}{c}{\textbf{$\theta_m$}} & \multicolumn{1}{c}{\textbf{$\gamma_m$}} & \multicolumn{1}{c}{\textbf{$\theta_m$}} & \multicolumn{1}{c}{\textbf{$\gamma_m$}} & \multicolumn{1}{c}{\textbf{$\theta_m$}} & \multicolumn{1}{c}{\textbf{$\gamma_m$}} & \multicolumn{1}{c}{\textbf{$\theta_m$}} & \multicolumn{1}{c}{\textbf{$\gamma_m$}} & \multicolumn{1}{c}{\textbf{$\theta_m$}} & \multicolumn{1}{c}{\textbf{$\gamma_m$}} & \multicolumn{1}{c}{\textbf{$\theta_m$}} \\ \midrule
+\textbf{Initial jobless claims}   & -0.002***                               & -0.009***                               & 0.004***                                & 0.011***                                & 0.001**                                 & -0.006**                                & 0,000                                   & 0,001                                   & 0,0003                                  & -0,002                                  & 0,0001                                  & 0,001                                   \\
+\textbf{ADP Employment}           & 0.005***                                & 0.023***                                & -0.009***                               & -0.023***                               & -0,001                                  & 0,005                                   & -0.001***                               & 0.032***                                & -0.001**                                & 0.005**                                 & -0.002***                               & -0.034***                               \\
+\textbf{CB Consumer}              & 0.001***                                & 0.005***                                & -0.0003***                              & -0,0002                                 & -0.0005**                               & 0.002***                                & 0,0003                                  & -0,001                                  & -0.0002*                                & -0,001                                  & -0.0003***                              & -0,00001                                \\
+\textbf{Advance retail sales}     & 0.002***                                & 0.007***                                & -0.002***                               & -0.005***                               & -0.001**                                & 0.004**                                 & -0,0001                                 & 0,003                                   & -0.0003*                                & 0,001                                   & -0.001***                               & -0,001                                  \\
+\textbf{Building permit}          & 0,0001                                  & 0,001                                   & -0.0003***                              & -0.001*                                 & 0,0002                                  & -0,001                                  & 0.001***                                & -0.007***                               & -0.0002**                               & 0,001                                   & -0.0002**                               & 0,0002                                  \\
+\textbf{Construction spending}    & 0,00002                                 & 0,001                                   & -0,0001                                 & -0,0004                                 & -0.001**                                & 0.002**                                 & 0,0001                                  & -0,002                                  & 0.0003*                                 & 0.002*                                  & -0,0001                                 & -0,001                                  \\
+\textbf{Consumer credit}          & 0,000                                   & -0,0001                                 & 0,000                                   & 0,00001                                 & -0,00003                                & 0,0002                                  & -0,0002                                 & 0,002                                   & 0,0001                                  & 0,001                                   & 0,0000                                  & 0,00003                                 \\
+\textbf{Consumer price index}     & -0.0005***                              & -0.002**                                & -0.001***                               & -0.004***                               & -0.001***                               & 0.003***                                & 0,0003                                  & -0,002                                  & -0,0001                                 & 0.002**                                 & -0.001***                               & -0.002**                                \\
+\textbf{Durable goods orders}     & 0.001***                                & 0.004***                                & -0.0004***                              & -0.001***                               & -0,0001                                 & 0,001                                   & 0,0002                                  & -0,001                                  & 0.0003**                                & 0,0003                                  & -0,0002                                 & 0.004***                                \\
+\textbf{Existing home sales}      & 0.0003**                                & 0.003***                                & -0,0001                                 & -0,0001                                 & -0.001***                               & 0.004***                                & 0.001*                                  & -0.004*                                 & -0.0002*                                & -0,001                                  & -0,00002                                & 0,001                                   \\
+\textbf{Factory orders}           & 0,0001                                  & 0,001                                   & -0,0002                                 & 0,0002                                  & 0,0001                                  & -0,0004                                 & 0.001**                                 & -0.006**                                & -0,0002                                 & -0,001                                  & -0.0003**                               & -0,001                                  \\
+\textbf{GDP}                      & 0.0003**                                & 0,001                                   & -0.001***                               & 0,0001                                  & 0,0001                                  & 0,001                                   & -0,0003                                 & 0.004*                                  & -0.001***                               & -0.001*                                 & -0.001***                               & -0,001                                  \\
+\textbf{Housing starts}           & 0.0003*                                 & 0,001                                   & -0.001***                               & -0.002***                               & -0,0002                                 & 0.001*                                  & -0,0003                                 & -0,0001                                 & -0,0001                                 & -0.001**                                & -0.0004***                              & -0.002**                                \\
+\textbf{Industrial production}    & 0,0003                                  & 0,001                                   & 0,00004                                 & 0.002***                                & -0,0001                                 & 0,0004                                  & 0,000                                   & -0,001                                  & -0,0002                                 & -0,0004                                 & -0.0003**                               & 0,001                                   \\
+\textbf{Michigan Sentiment Index} & 0.0003**                                & 0,0003                                  & -0.0001**                               & 0,001                                   & 0,0002                                  & -0,001                                  & -0,0003                                 & 0,002                                   & -0,0001                                 & -0,001                                  & -0.0003***                              & 0,001                                   \\
+\textbf{New home sales}           & 0.001***                                & 0.003***                                & -0.0003***                              & 0,0003                                  & -0.0004**                               & 0.003***                                & 0,0002                                  & -0,0004                                 & -0,0001                                 & -0,001                                  & -0.0004***                              & 0,001                                   \\
+\textbf{Non-farm employment}      & 0.022***                                & 0.108***                                & -0.033***                               & -0.090***                               & -0.012***                               & 0.064***                                & -0.002***                               & 0.069***                                & -0.002**                                & 0.010**                                 & -0,001                                  & -0,012                                  \\
+\textbf{Pending home sales}       & 0.001***                                & 0.003***                                & -0.0002*                                & -0,0003                                 & -0,0002                                 & 0,002                                   & 0,0002                                  & 0,001                                   & 0,00003                                 & -0,0003                                 & -0,0001                                 & 0,001                                   \\
+\textbf{Personal consumption}     & 0,0002                                  & 0,001                                   & -0.0003**                               & -0.001**                                & -0,0004                                 & 0,002                                   & -0,0001                                 & 0,001                                   & -0,00003                                & 0.001**                                 & 0,0001                                  & 0.004***                                \\
+\textbf{Personal income}          & 0.003***                                & 0.017***                                & -0.005***                               & -0.015***                               & -0.003***                               & 0.011***                                & -0,0002                                 & 0,006                                   & -0.0005**                               & 0.003***                                & -0.0003**                               & -0.019***                               \\
+\textbf{Producer price index}     & 0,0001                                  & 0,001                                   & -0.0002**                               & -0,0002                                 & -0.0005*                                & 0.002*                                  & -0,0002                                 & 0,001                                   & -0,0001                                 & 0,001                                   & -0.0002**                               & 0,001                                   \\
+\textbf{Trade balance}            & -0,0001                                 & -0,0001                                 & -0.0003*                                & -0,001                                  & -0,0003                                 & 0,001                                   & 0,0001                                  & 0,0004                                  & -0,00003                                & -0,001                                  & 0,00003                                 & -0.002*                                 \\ \bottomrule
+\end{tabular}%
+}
+
+\begin{tablenotes}
+        \singlespacing
+        \footnotesize
+       Presents the estimates of eq. \ref{eq:Model 1}, using the method proposed by \citep{kurov2019price} and financialization variable $X_{t,2}=NLS_t$. Only the positions of the swap dealers are included in the NLS index. The $\gamma_m$ coefficients capture the instantaneous change in return when an announcement has just occurred and especially if that announcement was unanticipated. The coefficients $\theta_m$ capture the instantaneous change in return when an announcement has just occurred in conjunction with the level of financialization.
+For all the regressions estimated in this table, we include the control variable NBER to control for the business cycle. 
+
+
+    \end{tablenotes}
+    
+\end{table}
+\end{landscape}
+
+
+\begin{landscape}
+\begin{table}[]
+\caption{ Announcement and financialization effects on conditional variance, with an alternative financialization variable built with the position of the money managers }
+\label{tab:reg_vol_mm}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lllllllllllll@{}}
+\toprule
+\textbf{Commodities}              & \multicolumn{2}{c}{\textbf{Crude Oil}}                                        & \multicolumn{2}{c}{\textbf{Gold}}                                             & \multicolumn{2}{c}{\textbf{Copper}}                                           & \multicolumn{2}{c}{\textbf{Natural Gas}}                                      & \multicolumn{2}{c}{\textbf{Palladium}}                                        & \multicolumn{2}{c}{\textbf{Silver}}                                           \\ \midrule
+\textbf{Announcements}            & \multicolumn{1}{c}{\textbf{$\Phi_m$}} & \multicolumn{1}{c}{\textbf{$\phi_m$}} & \multicolumn{1}{c}{\textbf{$\Phi_m$}} & \multicolumn{1}{c}{\textbf{$\phi_m$}} & \multicolumn{1}{c}{\textbf{$\Phi_m$}} & \multicolumn{1}{c}{\textbf{$\phi_m$}} & \multicolumn{1}{c}{\textbf{$\Phi_m$}} & \multicolumn{1}{c}{\textbf{$\phi_m$}} & \multicolumn{1}{c}{\textbf{$\Phi_m$}} & \multicolumn{1}{c}{\textbf{$\phi_m$}} & \multicolumn{1}{c}{\textbf{$\Phi_m$}} & \multicolumn{1}{c}{\textbf{$\phi_m$}} \\ \midrule
+\textbf{Initial jobless claims}   & 0.001***                              & -0.003***                             & 0.0003***                             & 0,0002                                & 0.0002***                             & -0,0003                               & -0.0003***                            & -0,001                                & 0.002***                              & -0.002***                             & 0.001***                              & -0.001***                             \\
+\textbf{ADP Employment}           & -0,0001                               & 0,0005                                & 0.0005***                             & -0,0005                               & 0.0002***                             & 0,0004                                & 0,0001                                & 0,0005                                & -0.001*                               & 0.001                                 & 0.001***                              & -0,00002                              \\
+\textbf{CB Consumer}              & 0.001***                              & -0.007**                              & 0.0002**                              & 0,0001                                & 0.0003***                             & -0,0005                               & -0,00004                              & 0,00004                               & 0.0001                                & 0.00002                               & 0.0004***                             & 0,00004                               \\
+\textbf{Advance retail sales}     & 0.001***                              & -0.009***                             & 0.001***                              & -0,0003                               & 0.0003***                             & -0.001***                             & 0.0003***                             & 0.004***                              & -0.0003                               & 0.001                                 & 0.001***                              & 0,001                                 \\
+\textbf{Building permit}          & 0,001                                 & -0,013                                & 0.001**                               & -0.002*                               & -0,0002                               & -0,0001                               & 0,001                                 & 0,002                                 & 0.015***                              & -0.029***                             & 0,001                                 & -0,005                                \\
+\textbf{Construction spending}    & 0.001***                              & -0.006**                              & 0.001***                              & -0,0004                               & 0.0004***                             & -0.002***                             & -0,00003                              & -0.003***                             & 0.001***                              & -0.001*                               & 0.001***                              & -0,0003                               \\
+\textbf{Consumer credit}          & 0,0004                                & -0,003                                & 0,0001                                & 0,0001                                & 0,00004                               & 0,0004                                & 0                                     & 0,0001                                & -0.001                                & 0.001                                 & 0,0001                                & 0,0004                                \\
+\textbf{Consumer price index}     & 0,00002                               & -0,0003                               & 0.0005***                             & 0,0004                                & 0,00001                               & 0,0005                                & -0,00003                              & 0,00004                               & -0.001                                & 0.002*                                & 0.001***                              & -0,001                                \\
+\textbf{Durable goods orders}     & 0,0003                                & -0,0002                               & 0,0001                                & 0,0001                                & 0,000                                 & -0,0003                               & 0,0001                                & -0,0002                               & 0.0005                                & -0.0004                               & 0,0001                                & 0,0004                                \\
+\textbf{Existing home sales}      & 0.001***                              & -0.007***                             & 0.0003***                             & 0,0002                                & 0.0002***                             & -0.002***                             & 0,0002                                & -0,001                                & 0.002***                              & -0.003***                             & 0.0004***                             & -0,0003                               \\
+\textbf{Factory orders}           & 0.002***                              & -0.013***                             & 0,0001                                & 0.001***                              & 0.0003***                             & -0.001***                             & 0,0001                                & -0.005***                             & 0.001***                              & -0.002*                               & 0,0001                                & 0.001*                                \\
+\textbf{GDP}                      & 0.001**                               & -0.006**                              & 0.0003***                             & 0.001*                                & 0.0002***                             & 0,0002                                & -0.0003*                              & -0.002**                              & 0.001***                              & -0.002***                             & 0.001***                              & -0,00004                              \\
+\textbf{Housing starts}           & -0,0001                               & 0,006                                 & -0.0005*                              & 0.002*                                & 0,0002                                & -0,0004                               & -0,001                                & -0,003                                & -0.014***                             & 0.028***                              & -0,0005                               & 0,004                                 \\
+\textbf{Industrial production}    & 0.001***                              & -0.012***                             & 0.0002**                              & 0,0002                                & 0,0001                                & -0.001*                               & -0.0002*                              & -0,002                                & 0.001***                              & -0.003***                             & 0.0004***                             & -0,001                                \\
+\textbf{Michigan Sentiment Index} & 0.001***                              & -0.006***                             & -0,00004                              & 0.001***                              & 0,00003                               & 0,0001                                & -0.0002*                              & 0,001                                 & 0.0001                                & 0.0002                                & 0,0001                                & 0,001                                 \\
+\textbf{New home sales}           & 0.001**                               & -0.005*                               & 0.0004***                             & 0,0001                                & 0.0002***                             & 0,0001                                & -0,0001                               & -0,001                                & 0.001***                              & -0.002***                             & 0.001***                              & -0,0002                               \\
+\textbf{Non-farm employment}      & 0.003***                              & -0.017***                             & 0.002***                              & 0,0003                                & 0.001***                              & -0.004***                             & 0.001***                              & -0.010***                             & 0.002***                              & -0.001                                & 0.004***                              & -0,001                                \\
+\textbf{Pending home sales}       & 0.001***                              & -0.006**                              & 0.0002***                             & -0.001*                               & 0.0003***                             & 0,0003                                & -0,0001                               & -0.003***                             & 0.001**                               & -0.001                                & 0,0002                                & 0,001                                 \\
+\textbf{Personal consumption}     & 0,00002                               & -0,0005                               & 0.0002*                               & -0,0003                               & -0,0001                               & 0,00002                               & 0,0001                                & -0.003***                             & 0.001**                               & -0.001                                & 0,00001                               & 0,001                                 \\
+\textbf{Personal income}          & 0.001*                                & 0,002                                 & -0,0001                               & 0.001**                               & 0.0004***                             & 0.003***                              & -0,0002                               & 0.009***                              & -0.001                                & 0.002*                                & -0.0004*                              & 0,002                                 \\
+\textbf{Producer price index}     & 0,001                                 & -0,003                                & 0.0002**                              & -0,0001                               & -0,0001                               & 0,0001                                & 0,0001                                & -0,0003                               & 0.001***                              & -0.001                                & 0.001***                              & -0,001                                \\
+\textbf{Trade balance}            & 0,0004                                & -0,001                                & -0.001***                             & 0.003***                              & -0.0002***                            & 0,001                                 & 0,0001                                & 0,001                                 & 0.0004                                & -0.0004                               & -0.001***                             & 0.004***                              \\ \bottomrule
+\end{tabular}%
+}
+
+\begin{tablenotes}
+        \singlespacing
+        \footnotesize
+       Presents the estimate of eq. \ref{eq:Variance} using financialization variable NLS (for Money Manager positions). The $\Phi_m$ coefficients capture the instantaneous change in the conditional variance when an announcement has just occurred. The $\phi_m$ coefficients capture the conditional variance when an announcement has just occurred in conjunction with the level of financialization.For all the regressions estimated in this table, we include the control variable NBER to control for the business cycle. 
+
+
+    \end{tablenotes}
+    
+\end{table}
+\end{landscape}
+
+\begin{landscape}
+\begin{table}[]
+\caption{ Announcement and financialization effects on conditional variance, with an alternative financialization variable built with the position of the swap dealers }
+\label{tab:reg_vol_swap}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lllllllllllll@{}}
+\toprule
+\textbf{Commodities}              & \multicolumn{2}{c}{\textbf{Crude Oil}}                                        & \multicolumn{2}{c}{\textbf{Gold}}                                             & \multicolumn{2}{c}{\textbf{Copper}}                                           & \multicolumn{2}{c}{\textbf{Natural Gas}}                                      & \multicolumn{2}{c}{\textbf{Palladium}}                                        & \multicolumn{2}{c}{\textbf{Silver}}                                           \\ \midrule
+\textbf{Announcements}            & \multicolumn{1}{c}{\textbf{$\Phi_m$}} & \multicolumn{1}{c}{\textbf{$\phi_m$}} & \multicolumn{1}{c}{\textbf{$\Phi_m$}} & \multicolumn{1}{c}{\textbf{$\phi_m$}} & \multicolumn{1}{c}{\textbf{$\Phi_m$}} & \multicolumn{1}{c}{\textbf{$\phi_m$}} & \multicolumn{1}{c}{\textbf{$\Phi_m$}} & \multicolumn{1}{c}{\textbf{$\phi_m$}} & \multicolumn{1}{c}{\textbf{$\Phi_m$}} & \multicolumn{1}{c}{\textbf{$\phi_m$}} & \multicolumn{1}{c}{\textbf{$\Phi_m$}} & \multicolumn{1}{c}{\textbf{$\phi_m$}} \\ \midrule
+\textbf{Initial jobless claims}   & 0.0004***                             & 0.002***                              & 0.0003***                             & -0.0005**                             & -0.0002*                              & 0.001***                              & -0.0002*                              & -0,001                                & 0.001***                              & 0.002***                              & 0.001***                              & 0.002***                              \\
+\textbf{ADP Employment}           & 0,0001                                & 0,001                                 & 0.0004***                             & 0,0003                                & -0,0002                               & 0.002**                               & 0,0002                                & -0,001                                & -0.0002*                              & -0.002*                               & 0.0005***                             & -0,001                                \\
+\textbf{CB Consumer}              & 0.001***                              & 0.002**                               & 0.0003***                             & 0,0004                                & -0.001***                             & 0.003***                              & 0,00002                               & -0,001                                & 0,0001                                & -0,0003                               & 0.0004***                             & 0.001*                                \\
+\textbf{Advance retail sales}     & 0.001***                              & 0.006***                              & 0.001***                              & 0,0003                                & -0.001***                             & 0.005***                              & 0.001***                              & -0.004**                              & 0,0001                                & -0,001                                & 0.001***                              & -0,0005                               \\
+\textbf{Building permit}          & -0,0001                               & 0,003                                 & 0,0004                                & 0,002                                 & 0                                     & 0,0001                                & 0,001                                 & -0,003                                & 0.004***                              & 0.041***                              & 0,0001                                & 0,002                                 \\
+\textbf{Construction spending}    & 0.001***                              & 0.002**                               & 0.001***                              & -0,0003                               & -0.001***                             & 0.005***                              & 0,00003                               & 0,001                                 & 0.001***                              & 0.002*                                & 0.001***                              & 0.002**                               \\
+\textbf{Consumer credit}          & 0,0002                                & 0.002*                                & 0,0001                                & 0,0002                                & 0,0002                                & -0,001                                & -0,0001                               & 0,0005                                & -0,0002                               & -0.002**                              & 0.0002**                              & -0,001                                \\
+\textbf{Consumer price index}     & 0,00003                               & 0,001                                 & 0.001***                              & 0.002***                              & 0,0002                                & -0,001                                & -0,00003                              & 0,0001                                & 0,00001                               & -0,001                                & 0.001***                              & -0.002*                               \\
+\textbf{Durable goods orders}     & 0.0005***                             & 0.002**                               & 0,0001                                & -0,0002                               & -0.0003*                              & 0.001*                                & -0,0001                               & 0,002                                 & 0.0004***                             & 0,001                                 & 0.0002**                              & 0.002**                               \\
+\textbf{Existing home sales}      & 0.0003**                              & -0.002*                               & 0.0003***                             & -0,001                                & -0.0003*                              & 0.002***                              & 0,0003                                & -0,001                                & 0.001***                              & 0.004***                              & 0.0004***                             & 0,001                                 \\
+\textbf{Factory orders}           & 0.001***                              & 0,001                                 & 0.0002***                             & -0.001***                             & -0.0004**                             & 0.002***                              & -0,0002                               & 0.005***                              & 0.0004***                             & 0.002**                               & 0.0002***                             & -0.002*                               \\
+\textbf{GDP}                      & 0.0004***                             & 0.004***                              & 0,0001                                & -0.002***                             & -0,00001                              & 0,001                                 & -0,0003                               & 0,001                                 & 0.0005***                             & 0,002                                 & 0.001***                              & 0,001                                 \\
+\textbf{Housing starts}           & 0,0004                                & 0,001                                 & -0,0003                               & -0,002                                & -0,001                                & 0,003                                 & -0,001                                & 0,004                                 & -0.003***                             & -0.040***                             & 0,00002                               & -0,001                                \\
+\textbf{Industrial production}    & 0.0003**                              & 0.004***                              & 0.0004***                             & 0.001*                                & -0,0001                               & 0,0005                                & -0,0002                               & 0,0002                                & 0,0002                                & 0.002***                              & 0.0003***                             & 0,001                                 \\
+\textbf{Michigan Sentiment Index} & 0,0001                                & 0,001                                 & 0,00002                               & -0.001***                             & 0,0001                                & -0,0003                               & 0,00001                               & -0,002                                & 0,0001                                & -0,001                                & 0.0003***                             & -0,0003                               \\
+\textbf{New home sales}           & 0.0004***                             & 0.003***                              & 0.0004***                             & 0,0001                                & -0,00004                              & 0,001                                 & -0,0002                               & 0,002                                 & 0.0004***                             & 0.003***                              & 0.001***                              & 0.002**                               \\
+\textbf{Non-farm employment}      & 0.002***                              & 0.013***                              & 0.003***                              & 0.002***                              & -0.002***                             & 0.011***                              & 0.001**                               & 0,003                                 & 0.002***                              & 0.004***                              & 0.003***                              & 0.007***                              \\
+\textbf{Pending home sales}       & 0.0004***                             & 0.002*                                & 0.0001*                               & 0,0001                                & -0,0002                               & 0.002**                               & 0,0002                                & -0,001                                & 0.0003**                              & 0,001                                 & 0.0003***                             & -0,0003                               \\
+\textbf{Personal consumption}     & -0,0001                               & -0,001                                & 0.0004***                             & 0.002***                              & 0,0001                                & -0,001                                & -0.0004*                              & 0.006***                              & 0.0004***                             & 0.002**                               & 0,0001                                & -0,001                                \\
+\textbf{Personal income}          & 0.001**                               & -0.004**                              & -0.0005***                            & -0.004***                             & 0.001***                              & -0.003**                              & 0,0001                                & -0,004                                & 0,0001                                & -0,002                                & -0,00002                              & 0,0002                                \\
+\textbf{Producer price index}     & 0,0001                                & -0,0003                               & 0,0001                                & -0.001**                              & -0,00002                              & -0,0003                               & 0,0001                                & -0,0001                               & 0.001***                              & 0.002**                               & 0.0004***                             & -0,001                                \\
+\textbf{Trade balance}            & 0.0004***                             & 0,0002                                & -0.0004***                            & -0.004***                             & 0,0001                                & -0,001                                & 0,0001                                & -0,001                                & 0,0001                                & -0,001                                & 0,00002                               & -0.009***                             \\ \bottomrule
+\end{tabular}%
+}
+
+\begin{tablenotes}
+        \singlespacing
+        \footnotesize
+       Presents the estimate of eq. \ref{eq:Variance} using financialization variable NLS (for swap dealers positions). The $\Phi_m$ coefficients capture the instantaneous change in the conditional variance when an announcement has just occurred. The $\phi_m$ coefficients capture the conditional variance when an announcement has just occurred in conjunction with the level of financialization.For all the regressions estimated in this table, we include the control variable NBER to control for the business cycle. 
+
+
+    \end{tablenotes}
+    
+\end{table}
+\end{landscape}
+
+
+
+
+
+
+
+

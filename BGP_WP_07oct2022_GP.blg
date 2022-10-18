@@ -1,0 +1,94 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: BGP_WP_07oct2022_GP.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apalike.bst
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+A level-1 auxiliary file: table.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+A level-1 auxiliary file: fig.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: appendix_a.aux
+Database file #1: master.bib
+You're missing a field name---line 158 of file master.bib
+ : 
+ : %  title={Volatility spillovers arising from the financialization of commodities},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 642 of file master.bib
+ : @article{irwin2012financialization
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 685 of file master.bib
+ : @article{fleming1997moves
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 728 of file master.bib
+ : @article{cai2001moves
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 780 of file master.bib
+ : @article{hammoudeh2008metal
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 898 of file master.bib
+ : @article{irwin2012testing
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 921 of file master.bib
+ : @article{irwin2012testing
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1030 of file master.bib
+ : @article{kilian2014role
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1152 of file master.bib
+ : @article{bryant2006causality
+ :                             ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in buyukcsahin2010matters
+Warning--empty journal in irwin2004effect
+You've used 74 entries,
+            1935 wiz_defined-function locations,
+            892 strings with 15266 characters,
+and the built_in function-call counts, 29391 in all, are:
+= -- 2962
+> -- 1099
+< -- 47
++ -- 385
+- -- 354
+* -- 2591
+:= -- 5070
+add.period$ -- 221
+call.type$ -- 74
+change.case$ -- 547
+chr.to.int$ -- 73
+cite$ -- 76
+duplicate$ -- 1063
+empty$ -- 2088
+format.name$ -- 497
+if$ -- 5691
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 73
+newline$ -- 371
+num.names$ -- 222
+pop$ -- 398
+preamble$ -- 1
+purify$ -- 546
+quote$ -- 0
+skip$ -- 821
+stack$ -- 0
+substring$ -- 2348
+swap$ -- 101
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 444
+warning$ -- 2
+while$ -- 267
+width$ -- 0
+write$ -- 953
+(There were 9 error messages)

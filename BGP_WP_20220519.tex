@@ -1,0 +1,377 @@
+ \documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsfonts,eurosym,geometry,ulem,graphicx,caption,color,setspace,sectsty,comment,footmisc,caption,natbib,pdflscape,subfigure,array,hyperref}
+\usepackage{hyperref}
+\hypersetup{colorlinks,
+citecolor=blue,
+linkcolor=magenta
+}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{setspace}
+\usepackage{tabularx} 
+\usepackage{rotating}
+\usepackage{tablefootnote}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{nicematrix}
+\usepackage{enumitem}
+\usepackage{array} 
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{wasysym}
+\usepackage{framed}
+\usepackage{pgfgantt}
+\usepackage{subfloat}
+\usepackage{multirow}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{colortbl}
+\usepackage{caption}
+
+\normalem
+
+\doublespacing
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+\bibliographystyle{aaai-named}
+
+\singlespacing
+\title{\textbf{Has financialization changed the impact\\ of macro announcements ?}\thanks{The authors thank participants at meetings of the Commodity \& Energy Markets Association (2021),  World Finance \& Banking Association (2021), Société canadienne de science  économique (2022), 4th Ethical Finance and Sustainability (EFS) conference (2022) as well as Alessandro Melone and Jocelyn Grira (discussants). For financial support, the authors thank the Social Sciences and Humanities Research Council and Chaire Industrielle-Alliance Groupe financier. Any remaining errors are ours alone.}}
+%J'arrive pas le centrer dans le titre
+\author{Simon-Pierre Boucher\footnote{Corresponding author, PhD student in finance, Université Laval, Quebec City QC Canada G1V 0A6, email:   \texttt{simon-pierre.boucher.1@ulaval.ca}}\and Marie-H{\'e}l{\`e}ne Gagnon\footnote{Professor of Finance and Research Fellow, CRREP, Université Laval, email: \texttt{marie-helene.gagnon@fsa.ulaval.ca}}\and Gabriel J. Power\footnote{Professor of Finance and Research Fellow, CRREP and CRIB, Université Laval, email:   \texttt{gabriel.power@fsa.ulaval.ca}}. 
+}
+%\author{ANONYMOUS VERSION}
+\date{ \today \\ First version: June 2021}
+\begin{document}
+\begin{titlepage}
+\maketitle
+
+
+
+
+
+\begin{abstract}
+\noindent 
+\singlespacing
+%Turmoil in commodity markets can threaten a sustainable energy future.
+The transition to a sustainable energy future requires considerable investments, which can be discouraged by heightened volatility in commodity markets.
+ We investigate, using high-frequency data, the impact of macroeconomic announcements on commodity futures returns and volatility, while accounting for the financialization of commodities. We find that financialization lessens the impact of macro news on commodity markets, as measured by price drift and volatility changes. This result is consistent with prior literature suggesting that financial participants improve liquidity and price discovery while reducing volatility. Assuming that traditional market participants prefer stability, our results suggest a beneficial impact of financialization, especially for pro-cyclical commodities such as crude oil and natural gas.
+
+\vspace{0.2in}
+\noindent\textbf{Keywords:} commodities, energy, futures,  spillover, financialization, high-frequency, sustainable, commercial, institutional, volatility, macro, announcements, surprise, events\\
+
+
+\bigskip
+\end{abstract}
+\setcounter{page}{0}
+\thispagestyle{empty}
+\end{titlepage}
+\pagebreak \newpage
+
+
+
+
+\doublespacing
+\section{Introduction} \label{sec:introduction}
+%The financialization of commodities appears to have affected in particular the energy sector \citep{Singleton2014}. This is not surprising, given the dependence of our societies on fossil fuels. However, with the growing need for a green energy transition, it is reasonable to believe that financialization will also affect the metals sector as these commodities are used in new technologies (such as electrical car batteries) to achieve this transition. 
+ %%INTRO
+%Despite all those concerns financialization could be helpful for the development of sustainable energy market.
+%If financialization  decreasing volatility, in commo and energy markets, it could foster greater investment in green energy sustianble transition. In fact, real option theory suggests that volatility disoucrages investment. Real option value theory means that volatility discourages investment because of option value of waiting when volatility is higher. Kellogg reference.
+%This implies that fostering commodity market stability should improve investment in green energy sustainable transition.
+%As more stable commodity markets would plausibly lead to greater investment in greeen transitition energy, it is relevant to investgiate to whether occurred in recent times and its impact on the underlying price distribution as it  as more widrespread market could be a step towards more  Sustainable, affordable and accessible raw energy markets.
+%%Carbon markets could help
+
+ICI ON DEVRAIT INTRODUIRE AVEC LE NEW COMMODITY SUPERCYCLE METTRE UN PEU DE DISCUSSION DES MEDIAS FINANCIERS
+%%MORE ECON THEORY TO EXPLAIN MM AND SD, THEIR MOTIVATION AND WHY RESULTS ARE LIKE THIS, AND LINK TO OTHER PAPERS IN OTHER SETTINGS THAT STUDY MM AND SD
+Since the early 2000s, commodities have gained renewed popularity among non-traditional market participants such as hedge funds and index traders. What is often called the \emph{financialization of commodities} represents a set of important market and regulatory changes in how commodities (futures, options, swaps and also physicals) are traded by institutional and other non-traditional investors, mainly for diversification or speculative purposes. Such increases in speculation and long-only index positions in commodity markets have been pointed out as being responsible for, respectively, increases in volatility and correlation between different commodities. \footnote{Helpful surveys of this large literature include \citet{boyd2018update} and \citet{cheng2014financialization}.}
+
+The financialization of commodities coincides, however, with a rare commodity bull cycle \cite{humphreys2010great}. Thus, it is no surprise that traditional market participants have voiced concerns that prices have been distorted  away from their fundamental values. For instance, \citet{masters2009testimony} argued  that institutional investors have disrupted commodity markets through the use of investment strategies typically found in financial markets. This \emph{Masters hypothesis} has been, however, challenged by empirical research \citep{irwin2011index,irwin2012testing,irwin2012financialization}. According to \citet{cheng2014financialization}, it is through risk sharing and information discovery that financialization affects commodity futures markets. Indeed, financial investors can either provide liquidity to meet the hedging needs of other traders or consume liquidity when they trade for their own needs \citep{kang2020tale} , thereby influencing liquidity risk. As for information discovery, commodity markets are affected by informational frictions in the global supply, demand and inventories of commodities. Indeed, international futures markets inform the more decentralized spot or cash markets. As a result, financialization could alter how commodity markets incorporate new information.
+
+%%IL FAUT INTRODUIRE MACRO ANNOUNCEMENTS, ON NE L'A PAS ENCORE FAIT!
+Keeping in mind these two channels of transmission for macroeconomic announcements, we investigate the impact of financialization on commodity markets through the lens of macroeconomic announcement releases and high-frequency data. We assess the extent to which financialization  affects how commodity futures prices and volatility react to macroeconomic announcements. This issue concerns the  resolution of uncertainty, market efficiency, and how news is anticipated. Our paper builds on the financial literature on  information transmission in markets. \citet{goldstein2019commodity} show how financial participants in commodity markets affect futures price informativeness, bias, and comovement. Their model predicts that financialization initially improves, but eventually worsens, price efficiency measured through volatility. This paper also relates to the evidence presented in \citet{brunetti2016speculators} pertaining to the positions held by certain types of speculators. They show that hedge funds benefit commodity markets by providing additional liquidity, resulting in a more efficient price. In contrast, merchant positions are positively correlated with volatility in the crude oil and natural gas market. 
+
+%%%%%CE PARAGRAPHE EST MOINS PERTINENT POUR  J F Q A. ON POURRA LE RAJOUTER POUR  E J.
+%Energy transition shines a new light on financialization as it may prove  helpful to develop sustainable energy markets. For instance, if financialization decreases volatility in commodity and energy markets, it could foster greater investment in energy transition. In fact, real option theory predicts that higher volatility discourages investment because the option value of waiting increases when volatility increases \citep{kellogg2014effect}.  Thus,  stability in commodity markets should improve investments in  energy  transition. While most of the focus so far has been  on energy firms, a large demand is also being created for the metals and minerals needed to build renewable energy infrastructures. Moreover, analysts argue that the energy transition will initiate a new commodity supercycle.\footnote{See e.g. J.P. Morgan Asset Management, ``A new supercycle – the clean tech transition and implications for global commodities,'' February 24, 2022. \url{https://am.jpmorgan.com/lu/en/asset-management/per/insights/market-insights/market-updates/on-the-minds-of-investors/clean-energy-investment/}}  These issues relate to the impacts of macroeconomics announcements as this transition may prove to alter the relationship between commodity markets and the real economy. \citet{knuth2018breakthroughs} emphasizes that the gradual shift away from fossil fuels may lessen the impacts of financialization on futures contracts and their relationship with commodity spot prices. Therefore, it is relevant to investigate whether financialization could, through a broadening of the investor base, be a step towards more sustainable, affordable and accessible raw energy markets.
+%Carbon markets could help%As more stable commodity markets would plausibly lead to greater investment in  energy transition , i
+
+
+%CONCLUSION. 
+%This paper and the recent body of research suggests that financialization may contribute to sustanability alongside other instruments such as green bonds and portfolio screens for sustainable invvestments.
+%
+%In the coming years, it will be essential to assess whether the gradual shift away from fossil fuels is lessening the impact of financialization on futures contracts, and the link with commodity spot prices \citep{Knuth2018}.
+
+%%CECI AURAIT PLUS SA PLACE DANS LA LIT REVIEW
+The literature is mixed on the potential increase in volatility in the commodity market caused by financialization. \citet{singleton2014investor} concludes that information friction and prices moving away from economic fundamentals lead to a large increase in volatility. Using a Granger causality test and forecasting on the error of variance, \citet{yang2005futures} shows that an increase in commodity future trading volume leads to an increase in the volatility of commodity spot prices. \citet{bryant2006causality} reject the hypothesis that speculation and uninformed traders affect the level of volatility. They further show that the two theories that would predict this hypothesis (namely hedging pressure and normal backwardation) are empirically rejected and have no explanatory power. Finally, using a conditional variance measure as well as daily returns on raw material futures, \citet{bohl2013does} show that financialization implies no change in variance.
+
+
+%%CONTRIBUTION
+Our contribution lies at the intersection of the macro announcements and financialization literatures. To study the impact of announcements, the methodology has moved from daily to high-frequency data, looking at  bonds  \citep{andersen2007real, hu2013noise, balduzzi2001economic,lee1995oil, hautsch2011impact, kurov2019price}, stocks \citep{andersen2007real,bernile2016can,kurov2019price} and foreign exchange rates \citep{lee1995oil,andersen2003micro}. But the use of high frequency data is not widespread in commodity futures. We argue that this literature's use of a lower sampling frequency for futures price returns could explain why no clear answer has emerged on volatility \citep{tang2012index,brunetti2016speculators,irwin2012testing,stoll2010commodity,alquist2013role}. Since most of of these studies use daily or monthly data, the resulting sample size is fairly small, which reduces the power of statistical tests \citep{irwin2009devil}.  
+
+To better measure the impact of financialization, we use the setting of high-frequency macro announcement releases, allowing us to look at information diffusion. By using high-frequency data, we can measure separately permanent and transitory, news-related shocks on volatility.
+Using high-frequency data further allows us to bypass a traditional criticism of event-study methods, namely that at a daily frequency the effect of an announcement could easily be attributable to another market event \citep{kothari2007econometrics}. We focus on the US market due to the greater availability of high-frequency data on commodity futures as well as the wealth of distinct macro announcements.
+
+Our first contribution is to consider richer measures of financialization than previously used. Previous research typically splits the sample into pre- and post-financialization periods, generally using 2004 as the break point.\footnote{Although the Commodity Futures Trading Commission passed the Commodity Futures Modernization Act in 2000, the literature generally agrees that 2004 marks the beginning of financialization.} Most previous studies have assumed that financialization started in the early 2000s and that separating the sample into two groups (pre- and post-financialization) is sufficient to capture the impact of this phenomenon \citep{buyukcsahin2010matters, kilian2014role,brunetti2016speculators,irwin2012financialization,stoll2010commodity,alquist2013role}. While it is well established that the period of financialization seems to have started in the early-to-mid 2000s, the use of this method seems to neglect the time-varying speculation level in the post-financialization period. Moreover, we further describe these measures by separately quantifying the level of speculation of fund managers and swap dealers.
+
+ Our findings can be summarized as follows: We document that financialization contributes to information diffusion and price discovery. We find that in general, the impact of macro announcements is dampened when financialization is stronger for a given commodity. We interpret this result as indicating that commodity markets are better informed–-and macro news create less of a shock–-when they are financialized, which should be beneficial for traditional commodity market participants. This main finding is weaker in the case of gold, a safe haven asset. Thus, the beneficial effects of financialization appear to be stronger for pro-cyclical commodities such as crude oil or natural gas. This result is particularly relevant for the energy commodity sector. 
+
+Second, we find that money managers contribute more to price discovery when there is a macro announcement, while helping to reduce volatility. This result is consistent with the idea that money managers are more informed investors, given their function in the markets. Swap dealers also contribute to price discovery but  cause an increase in volatility following macro announcements. When we consider all categories of traders, greater levels of financialization seem to reduce  volatility in commodity markets. 
+
+In terms of policy implications, our results reject the \citet{masters2009testimony} hypothesis according to which  financialization increases commodity price instability and systemic risk. Thus, what we find is consistent with a considerable share of the literature. However, when we separate financial traders into two categories, our results allow us to reject  the \citet{masters2009testimony} hypothesis only for money managers. The evidence points a different way for swap dealers, suggesting they may contribute to commodity price instability. We perform robustness tests which show that our main findings are robust to the use of alternative volatility measures and to differences in econometric specification.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Literature Review}
+
+\subsection{Financialization of Commodities}
+
+Several authors argue that the financialization of commodities has had a clear impact on futures prices and volatility. \citet{tang2012index} show that the popularity of index funds and the rapid growth of index investments in commodity markets have increased the correlation between crude oil prices and the prices of other, non-energy commodities. They argue that when a commodity is included in a benchmark index, its own price is no longer determined solely by the supply and demand for that specific commodity. Rather it is also determined by all the commodities and other financial assets included in the index. Relatedly, \citet{brunetti2014commodity}  use an equilibrium model and data containing trader positions in commodity futures markets to show that index traders represent an important source of insurance against price risk.   \citet{basak2016model} develop a theoretical model that yields four main findings. (i) The prices of all commodity futures increase with financialization and that this increase is more significant for futures belonging to the index than for non-index futures. (ii) The volatility of both index and non-index futures return increases with financialization. (iii) Correlations among commodity futures returns as well as the equity-commodity correlations increase with financialization. (iv) Only prices of storable commodities are affected by financialization. Moreover, in the presence of institutional investors, inventories and prices of storable commodities are higher than in the benchmark economy. Once again this effect is stronger for commodities included in the index.
+
+
+Regarding speculation, \citet{singleton2014investor} shows that speculative activity by financial investors creates significant informational frictions such that commodity prices can quickly move away from the value that is justified by fundamentals. 
+However, a consensus has not been reached in the literature.  \citet{stoll2010commodity}  show that inflows and outflows from commodity index investments do not cause significant changes in price and volatility in the Granger sense. Using an arbitrage argument, \citet{hamilton2014risk} show that the positions of commodity traders included in index funds cannot be used in order to achieve excess returns in  futures markets. As for financialization linked to speculation,  \citet{kilian2014role}  show that several speculative trades can occur in the oil market without observing a significant change in inventory levels, ruling out speculation as being responsible for the boom and bust in the oil market between 2003 and 2008. Moreover,  \citet{brunetti2016speculators}  analyze the impact of certain types of speculators in commodity markets from 2005 to 2009. They find that hedge funds allow for faster and more efficient price discovery, resulting in a lower volatility. Furthermore, they find that the positions of swap dealers are not correlated with contemporaneous returns and volatility in the commodity markets.  Table 1 presents a summary of the literature on the influence of financialization and speculation on the volatility of commodity futures returns.
+
+\subsection{Macro News Announcements}
+
+Other research has examined whether economic conditions can explain some of the more heterogeneous responses across business cycles \citep{boyd2005stock,andersen2003micro}. \citet{boyd2005stock} shows that the impact of announcements related to unemployment has a different impact depending on the economic situation. \citet{andersen2003micro} also find that the stock market reacts to news differently depending on the stage of the business cycle.
+
+Exploiting the fact that high-frequency traders receive the Michigan Consumer Sentiment Index 2 seconds before its official announcement, \citet{hu2017early} show that there is evidence of highly concentrated trading and rapid price discovery occurring within 200 milliseconds. Outside this narrow window, typical investors trade at fully adjusted prices. 
+
+\citet{balduzzi2001economic}  use intraday data from the interdealer government bond market to investigate the effects of scheduled macroeconomic announcements on prices, trading volume, and bid-ask spreads. They find that 17 public news releases, as measured by the surprise in the announced quantity, have a significant impact on the price of at least one of the following instruments: a three-month bill, a two-year note, a 10-year note, and a 30-year bond. In addition, they argue that these effects vary significantly according to maturity. The authors also show that following a macroeconomic announcement, volatility and trade volume increase persistently and significantly.
+
+%(see e.g. cite quelques papiers que j’ai enlevé)
+While the literature documenting impacts of macroeconomic announcements on stock \citep{boyd2005stock,andersen2003micro,hu2017early,scholtus2014speed} and bonds \citep{fleming1997moves,fleming1999price,balduzzi2001economic} is large, the commodity literature has mostly focused on OPEC meeting announcements so far.  \citet{horan2004implied} find that volatility drifts upward as the OPEC meeting draw nearer, then decreases by three percent after the first day of the meeting and by five percent over a five-day window period. \citet{wirl2004impact} investigate how far OPEC might influence world oil markets by looking at fifty meetings from 1984 to 2001. They find that the market does not seem to reveal much about these meetings. \citet{kilian2011energy} run regressions of WTI crude oil and U.S. gasoline prices on 30 U.S. macroeconomic announcements using daily data from 1983 to 2008 and find no evidence of statistically significant responses for either oil or gasoline to U.S. macroeconomic news at daily time horizons.
+
+
+At the level of macroeconomic announcements, \citet{frankel1985commodity} find using daily data on commodities that a 1 percentage point positive shock in the money supply leads to a 0.7 percent decline in gold prices. \citet{christie2000macroeconomics} analyzes the sensitivity of gold and silver futures prices over 15-minute intervals to 23 U.S. macroeconomic news announcements from 1992 to 1995 and find that gold and silver price volatility is higher during days in which there are announcements. \citet{cai2001moves} capture intraday patterns of 5 minute gold prices using GARCH models around macro announcements. They find GARCH effects in intraday prices, but the number and significance of announcement coefficients are lower for gold than for bonds or currencies. Related to financialization, \citet{hess2008commodity} assess the impact of 17 U.S. macro announcements on the value of CRB and Goldman Sachs commodity indexes. They find that commodity indexes are sensitive to far fewer announcements than bonds or stocks.
+
+\citet{gu2018drives} show that, in the natural gas market, the difference between the median forecast of analysts with high historical forecasting accuracy and the consensus forecast can be used to predict inventory surprises, which explains some of the pre-announcement price drift.  \citet{hollstein2020volatility} analyze the impact of selected economic variables on the term structure of volatility in commodity futures markets. They show that speculation and jobs-related macro variables have the largest impact on volatility. Lastly, \citet{ye2021macroeconomic} quantify the impact of expectations about future economic conditions on commodity futures markets. They find that volatility in commodity futures seems to be more impacted by macroeconomic forecasts than by current economic conditions. 
+
+%CE SERAIT BIEN DE POSITIONNER NOTRE PAPIER ICI, DE DIRE, WHAT WE CONTRIBUTE RELATED TO THIS LITERATURE IS THIS...
+
+\section{Data}
+\subsection{Commodity Futures Price Data}
+For each of the commodities studied, the price return is calculated over a period of 5 minutes $(\tau=5)$ using intraday data. We designate $R_t$ as the return over a period of 5 minutes starting exactly at time $t$. The database contains, for all 5-minute intervals, the price of the futures contract at the opening ($p_{t}^{Open}$) of that 5-minute period and at the close ($p_{t+\tau}^{Close}$). Subsequently, the return $R_t$ is obtained by using $p_{t}^{Open}$ and $p_{t+\tau}^{Close}$ as in equation (\ref{eqn:RETURN}):
+
+\begin{equation}\label{eqn:RETURN}
+R_t^{t+\tau}=\ln \left( \frac{p_{t+\tau}^{Close}}{p_{t}^{Open}} \right)=\ln (p_{t+\tau}^{Close})-\ln(p_{t}^{Open})
+\end{equation}
+
+Our last analysis seeks to confirm that the results obtained using 5-minute returns can be confirmed if we use returns calculated over a larger time interval. To do this, we estimate equation 10 again, but this time using 30-minute returns.
+% ICI EST-CE QUE C'<EST UNE PREDICTION THEORIQUE OU C'EST CE QUE RAPPORTE LA LITTERATURE?
+Typically, crude oil and natural gas (i.e., energy) have a pro-cyclical behavior. On the other hand, gold and silver (i.e., precious metals) behave as a safe haven while copper and palladium (industrial metals) behave ambiguously as they are used in the manufacturing of consumer products.
+
+\subsection{Macroeconomic Announcements}
+ 
+The 22  announcements that we use are standard to the literature (see e.g.,  \citep{kurov2019price}). We can separate the announcements into 10 main categories: Income, Employment, Industrial Activity, Investment, Consumption, Housing Sector, Government, Net Exports, Inflation and Forward-looking. The majority of announcements are released on a monthly basis. However, there are some exceptions, for which the frequency of release is quarterly or weekly.
+
+Following the literature on macro announcements, we do not directly use the value of the announcement release, but rather the resulting \emph{surprise}. To calculate announcement surprises, we use the method in \citet{balduzzi2001economic} as a starting point. The variable $A_{kt}$ represents the realized value for macroeconomic announcement $k$ at time $t$, while $E_{kt}$ represents the median value of all analyst forecasts for the macroeconomic announcement $k$ at time $t$. In addition, $\sigma_k$ represents the sample standard deviation of the surprise in absolute value, for the entire period of our sample and the macroeconomic announcement $k$. Equation (\ref{eqn:SURPRISE}) presents the surprise at time $t$ for the macroeconomic announcement $k$.
+%%IL FAUT PRECISER QUELS ANALYSTES, QUEL FORECASTS, QUELLE SOURCE POUR CES FORECASTS
+
+\begin{equation}\label{eqn:SURPRISE}
+S_{kt}=\frac{A_{kt}-E_{kt}}{\sigma_k}
+\end{equation}
+
+Table \ref{tab:stat1} summarizes each announcement along with its category, frequency, source, unit of measure, and release time respectively. Bloomberg provides analyst forecasts for all macroeconomic announcements. For the actual value of the macroeconomic announcement release, data are available from Bloomberg (see e.g., \citep{kurov2019price}). 
+
+Table \ref{tab:stat2} presents the minimum value, 1st quartile, median, mean, 3rd quartile and maximum value of the surprise for each macroeconomic announcement. The sizable difference between the minimum value and the 1st quartile, as well as the difference between the maximum value and the 3rd quartile, is explained in large part by observations during the COVID-19 pandemic. Figures 5, 6, 7 and 8 present, for each macroeconomic announcement, a time series displaying the median analyst forecast and the realized value. Note that analyst forecasts are relatively precise, even during a period of high volatility in realized value.
+
+\subsection{Measures of commodity financialization}
+To measure the impact of commodity financialization, we need a measure of the intensity of speculation in commodity markets. We argue that commodity markets are more financialized when speculative activities increase relative to production activity. The indexes are constructed using data in the \emph{Commitment of Traders (COT) Report} published weekly by the Commodity Futures Trading Commission (CFTC). The Commodity Futures Trading Commission (CFTC) provides a comprehensive database with weekly observations. The data provided by the CFTC is only related to the number of positions held by different types of participants in commodity markets. The CFTC separates the types of traders as follows:
+
+\begin{enumerate}
+\item \textbf{Commercial}: All traders' reported futures positions in a commodity are classified as commercial if the trader uses futures contracts in that commodity for hedging
+\item \textbf{Non-Commercial:} Derived by subtracting total long and short Commercial Positions from the total open interest
+\end{enumerate}
+
+The Commodity Futures Trading Commission defines commercial traders as participants in commodity markets who primarily use futures contracts to hedge their business activities (e.g., buying or selling commodities). All traders who are not classified as Commercial are automatically be classified as Non-Commercial traders. To obtain the number of long positions held by non-commercial traders, we subtract the total long Commercial Positions from the total open interest. For the number of short positions held by non-commercial traders, we subtract the total short Commercial Positions from the total open interest. The following elements are presented in the report and are used as inputs for financialization measures:
+
+\begin{itemize}
+\item $SS_i$ is the number of short positions in commodity $i$ futures held by non-commercial traders,
+\item $SL_i$  is the number of long positions in commodity $i$futures held by non-commercial traders,
+\item $HS_i$ is the number of short positions in commodity $i$ futures held by commercial traders, 
+\item $HL_i$ is the number of long positions in commodity $i$ futures held by commercial traders.
+\end{itemize}
+
+\subsubsection{Working-T}
+We use a measure developed by \citet{working1960speculation}, which allows for the comparison between speculative activities and hedging activity. More specifically, the index compares the level of activity of non-commercial commodity future traders (e.g., speculators) to the activity of commercial traders (e.g., hedgers). Typically, commercial traders take short positions in futures contracts while non-commercial traders take long positions (see also \citet{shanker2017new}, for an updated definition of Working’s T). Working’s model measures the extent to which speculation exceeds the level required to offset any unbalanced hedging at the market clearing price. 
+The Working-T index, $WT_i$, can be constructed using equation (\ref{eqn:Working}) :
+
+\begin{equation} \label{eqn:Working}
+WT_i\left\{\begin{matrix}
+ 1+\frac{SS_i}{HL_i+HS_i} \hspace{0.5cm} \mbox{if} \hspace{0.5cm} HS_i \ge HL_i\\
+1+\frac{SL_i}{HL_i+HS_i} \hspace{0.5cm} \mbox{if} \hspace{0.5cm} HS_i < HL_i
+\end{matrix}\right.
+\end{equation}
+
+
+\subsubsection{Market Share of Non-Commercials (MSCT)}
+\citet{buyukcsahin2014speculators} propose a measure of commodity financialization showing the market share of non-commercial traders. The market share of non-commercial traders (MSCT) is a ratio between the sum of the short and long positions of non-commercial traders over twice the total open interest in that market: 
+
+\begin{equation} \label{eqn:MSCT}
+MSCT_i=\frac{SL_i+SS_i}{2 \times OI_i}
+\end{equation}
+
+\subsubsection{Net Long Short (NLS)}
+\citet{hedegaard2011margins} uses an index measuring the extent of speculation by calculating the ratio of net long speculative positions over total open interest ($NLS_i$)
+\begin{equation} \label{eqn:NLS}
+NLS_i=\frac{SL_i-SS_i}{OI_i}
+\end{equation}
+
+Tables \ref{tab:stat5}, \ref{tab:stat6} and \ref{tab:stat7} present the descriptive statistics for the financialization variables NLS, MSCT and Working-T respectively. We can see that palladium has the highest average value for our three financialization variables. Furthermore, when we look at the minimum and maximum value, we also see that palladium has the lowest minimum value and the highest maximum value. The level of financialization of palladium seems to be very volatile compared to other commodities. In Figures \ref{fig:MSCT}, \ref{fig:NLS} and \ref{fig:WORKINGT}, for each commodity, a time series shows respectively the MSCT index, the NLS index and the Working-T index. Crude oil is the only commodity for which the three indexes that measure the degree of financialization increase over time. This observation suggests that crude oil has attracted more financial interest from non-traditional market participants than other commodities. Autocorrelation in returns is only negative for natural gas, and then only occasionally. In addition, all commodities in our sample have a seasonality component in returns autocorrelation.
+ 
+Next, Tables \ref{tab:stat8}, \ref{tab:stat9} and \ref{tab:stat10} present the correlation between the different commodities for the financialization variables NLS, MSCT and WORKING-T respectively. There is a strong correlation of the financialization variable MSCT and Working-T between Silver, Gold and Copper. Indeed, for the MSCT variable, the correlation is 15.02\% between silver and gold and 14.53\% between silver and copper. When we look at the Working-T variable, the correlation between silver and gold is 32.6\% and the correlation between silver and copper is 9.73\%. For the financialization variable NLS, there does not seem to be a significant correlation between the different commodities.
+
+\section{Methodology}
+\subsection{Modeling the impact on returns}\label{return}
+Our regression models are based on \citet{kurov2019price} and \citet{andersen2007real}. To be consistent with the existing literature, we perform the two procedures for the regression model presented in the equation (\ref{eq:Model 1}):
+\begin{equation}\label{eq:Model 1}
+R_{t}^{t+\tau}=\alpha+\sum_{m=1}^{22} \gamma_m S_{m,t}+ \delta X_{t,i} + \sum_{m=1}^{22} \theta (S_{m,t} \times X_t)+\beta R_{t,-\tau}^{t}+\epsilon_{t} 
+\end{equation}
+In equation (\ref{eq:Model 1}), $R_{t}^{t+\tau}$ denotes the continuously compounded asset return between time $t$ and $t+\tau$, $S_{mt}$ denotes the surprise for the macroeconomic announcement $m$, which was published at time $t$. $X_{t,i}$ is the measure of commodity financialization $i$,  which is valid at time $t$. $X_{i = 1}$, The three possible values for the exogenous variable are:  $X_{t,1}$, $X_{t,2}$ and $X_{t,3}$ represent the financialization variables $MSCT_i$, $NLS_i$ and $WT_i$ . 
+
+We estimate the model using the two-step weighted least squares procedure. In the case of \citet{andersen2007real}, we estimate equation (\ref{eq:Model 1}) by OLS. Then, we regress the residuals of the last model, in absolute value, on the macro variables as well as on 23 time-specific dichotomous variables to adjust for the time of day. This auxiliary regression is represented by the equation (\ref{eq:auxiliary 1}).
+
+\begin{equation}\label{eq:auxiliary 1}
+\mid \epsilon_{t} \mid=\rho+\sum_{m=1}^{22} \zeta_m S_{m,t}+\sum_{h=1}^{23} \delta_h D^h
+\end{equation}
+After estimating the model, we use the fitted value of the residuals to obtain the WLS regression weight:
+\begin{align*}
+w_t=1/\mid \hat{\epsilon_t} \mid^2
+\end{align*}
+
+To finish, we multiply each dependent and independent variable of our original model by $w_t$, to finally estimate the model again by OLS.
+
+Next, we estimate eq.(\ref{eq:Model 1}) using the \citet{kurov2019price} approach. Heteroskedasticity is accounted for by constructing an estimate for volatility by means of an exponential moving average, using the regression residuals obtained in the first step. This auxiliary regression is represented by equation (\ref{eq:auxiliary 2}) in which the smoothing parameter is $\alpha=0.9$ and the starting parameter is set as $\sigma_1=\epsilon_t$:
+
+\begin{equation}\label{eq:auxiliary 2}
+\sigma_t=\alpha \sigma_{t-1}+(1-\alpha) \mid \epsilon_t \mid 
+\end{equation} 
+
+After obtaining  $\sigma_t$ for each observation, we transform it to obtain the WLS regression weight:
+\begin{align*}
+w_t=1/\mid \hat{\sigma_t} \mid^2
+\end{align*}
+
+As with the previous equation, we complete this step by multiplying each variable by  $w_t$ and we run an OLS regression to estimate the model.%, to finally estimate the model again by OLS.
+
+ The impact of macro announcements on commodity futures returns  can be assessed by looking at the significance of the coefficient $\gamma_m$ in the mean equation. As for the impact of financialization on commodity futures returns, we test the significance of the coefficient $\delta$. Finally, the significance of the coefficient $\theta_m$ is tested to quantify the simultaneous impact of financialization and the surprise following a macro announcement on commodity futures returns.
+ 
+\subsection{Modeling the impact on volatility}\label{variance}
+Using a GARCH specification is justified by the time-varying and clustered volatility of commodity price returns (e.g. \citep{hammoudeh2008metal}).
+The ARCH(1) specification is used to quantify the impact of macro announcements and financialization on conditional variance. Estimating the ARCH model is done in two steps. First, we estimate the mean eq. (\ref{eq:Mean}):
+\begin{equation}\label{eq:Mean}R_{t}^{t+\tau}=\alpha+\sum_{m=1}^{22} \gamma_m S_{m,t}+\beta R_{t,-\tau}^{t}+\epsilon_{t}
+\end{equation}
+
+
+\begin{equation}\label{eq:Variance}
+h_{t}=\alpha_0+\alpha_1 h_{t-1}+\sum_{m=1}^m \Phi_m D_{m,t}+\beta X_{i,t}+\sum_{k=1}^n \phi_k I_{kt}
+\end{equation}
+
+where $I_{kt}=D_{m,t} \times X_{i,t}$ and $D_{m,t}$ is a dummy variable for the macro announcement $m$. It equals $1$ if an announcement took place at time $t$ and 0 otherwise. $X_{i,t}$  is the financialization variable $i$ as of time $t$. The impact of the macro announcement $m$ on commodity futures volatility is tested by means of the significance of $\Phi_m$ in the variance eq.(\ref{eq:Variance}). To assess the impact of the financialization variable $X_m{i,t}$ on commodity futures volatility, we look at the significance of the coefficient $\beta$. Finally, we look at the significance of the coefficient $\phi_k$ to assess the simultaneous impact on commodity futures volatility of  financialization  and the surprise contained in macro announcement $m$. 
+
+Among the announcements that are analyzed, only a positive surprise in Initial Jobless Claims indicates a deterioration in economic conditions. In the case of the energy sector, we expect the surprise coefficient to be positive if the surprise for the Initial Jobless Claims announcement is negative. For the other announcements, the coefficient is expected to be positive when the surprise is positive. For precious metals, the coefficient attached to the surprise is expected to be positive if the surprise for the \textbf{Initial Jobless Claims} announcement is positive. For the other announcements, the coefficient is expected to be positive when the surprise is negative.
+
+\subsection{Types of non-commercial traders}
+To better categorize financialization and its effects, we reproduce the procedure in (\ref{return})  and (\ref{variance}) using only the NLS index for two separate groups of Non-Commercial investors: swap dealer and money managers. A swap dealer is an entity that deals primarily in swaps for a commodity and uses the futures markets to manage or hedge the risk associated with those swaps transactions. The swap dealer’s counterparties may be speculative traders, like hedge funds, or traditional commercial clients that are managing risk arising from their dealings in the physical commodity. A money manager is a registered commodity trading advisor (CTA), a registered commodity pool operator (CPO), or an unregistered fund identified by CFTC. These traders are engaged in managing and conducting organized futures trading on behalf of clients. For both categories (swap dealers and managed money), the CFTC reports the number of long and short positions. We construct, for each category, the NLS index proposed by Hedegaard (2011). This measurement allows us to quantify the extent of speculation for Money Managers and Swap Traders, respectively. For Swap Traders, we represent the index by $NLS_{SWAP}$ while for Money Managers, we represent the index by $NLS_{MM}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Empirical results} \label{sec:result}
+
+\subsection{Effect on returns}
+We now present the results of regressions explaining returns following a macroeconomic announcement. Results for different commodities are presented in tables \ref{tab:reg1} (crude oil), \ref{tab:reg2} (gold), \ref{tab:reg3} (gold), \ref{tab:reg4} (copper), \ref{tab:reg5} (natural gas) and \ref{tab:reg6} (silver), respectively.
+
+We focus first on the $\gamma_m$ coefficient which measures the impact of a surprise on the commodity futures returns following a macro announcement. The coefficient attached to the surprise for the Initial Jobless Claims announcement is negative for crude oil (table 12) and positive in the case of gold (table 13). This result is consistent with oil being procyclical, while gold is typically seen as a safe haven asset.  In addition, this result is significant for the coefficients obtained using the method of \citet{kurov2019price} and \citet{andersen2007real}. For the surprises linked to the CB Consumer, Advance Retail Sales, ADP Employment and Pending Home Sales announcements, we obtain coefficients that are significant and positive for crude oil (table \ref{tab:reg1}) and significant and negative for gold (table \ref{tab:reg2}). Table (\ref{tab:reg3})  shows that copper returns behave like crude oil returns, as high-grade copper is an industrial metal and a pro-cyclical commodity. The coefficient attached to a surprise of the Initial jobless claims announcement is negative but positive for other macroeconomic announcements. 
+
+Next, we consider each of the three candidate variables to proxy for financialization, one of which is added to the regression model eq. (\ref{eq:Model 1}) . 
+
+The $\theta_m$ coefficient assesses the impact of financialization on commodity returns following an announcement release. For crude oil (table \ref{tab:reg1}) and gold (table \ref{tab:reg2}),  $\gamma_m$ is similar to the previous results that excluded a financialization variable, but the coefficient $\theta_m$ is consistently of the opposite sign.  Thus, an increase in speculation reduces the extent of the drift during a macro  announcement. This effect is robust to the other financialization variables NLS and Working’s-T, as presented in tables \ref{tab:reg1} through \ref{tab:reg6}.
+
+\subsubsection{Financialization effects for particular macro announcements}
+
+ %UN BOUT QUI SEMBLAIT DUPLIQUE: ADP employment  all the concidered commodities for all financiarization variable considered. 
+  In this subsection, we present the macroeconomic announcements that appear to have an impact on all commodity futures returns when we combine the impact of macro  surprises with our financialization variables.  More specifically, using MSCT as proxy, the effect of financialization is significant for all commodities when we combine it with surprises for the following macroeconomic announcements: ADP Employment, Durable goods orders, and Non-farm employments. Using instead NLS as proxy for financialization, we find a significant effect for announcement surprises in Initial jobless claims, ADP Employment, Advance retail sales, New home sales, and Personal income. Finally, using Working's T as proxy, the effect of financialization is significant for  Initial jobless claims, ADP Employment, CB Consumer, Durable goods orders, New home sales and Non-farm employment. Thus,  announcements related to employment and household income seem to have an impact on commodity returns when we include a financialization variable in the regression model. Our results are consistent with \citet{hordahl2015expectations} where macroeconomic announcements included in the Employment Report are the most important and the most likely to influence the returns and  volatility of financial assets.
+  
+	\subsection{Effect on volatility}
+	Table \ref{tab:var1} shows the results of equation 10 estimated for crude oil futures.   Coefficient $\Phi_m$ linked to announcements is positive and significant.  Macro announcements typically increase crude oil futures volatility. However, the $\phi_k$ coefficient  is always negative when it is significant. This supports \citet{brunetti2016speculators}, who argue that speculation reduces volatility rather than increasing it. Table \ref{tab:var2} shows similar results for gold. Indeed, the $\phi_k$  coefficient is not always negative when it is significant. For copper, table \ref{tab:var3} shows a similar effect as increased speculation lowers volatility  following a macro announcement. The results shown in tables \ref{tab:var4},\ref{tab:var5} and \ref{tab:var6} indicate that for natural gas, palladium and silver, the results seem to be of the same magnitude as those of crude oil.  Overall, our results are consistent with those obtained by \citet{brunetti2016speculators}.
+	
+	
+	\subsubsection{Financialization effects for particular macro announcements}
+Looking at conditional variance, when we combine the macro  announcements Non-farm employment or Pending home sales with the MSCT financialization index, we obtain a consistent result for all commodities in our sample. When we use NLS as an index of financialization, we obtain significant and consistent results for all commodities as well for the surprise coefficient for Advance retail sales, Construction spending, Factory orders and Non-farm employment.
+Finally, if we use the Working-T financialization index, we find significant results for all commodities for macro announcements in Factory orders, Initial jobless claims and New home sales.
+
+ 
+ %\vspace{1cm}
+ %% Why arewe focusing here on Employment report specifically?
+Price discovery following a surprise in the Employment Report macro announcement seems to be more efficient when the market is more financialized and this for all the commodity futures contracts studied. However, the results showing that the financialization favors a reduction in variance, are less generalizable to all the commodities studied. The only macroeconomic announcement with a negative and significant coefficient for all commodities is Non-farm employment. Once again, this results is consistent with those obtained by \citet{hordahl2015expectations}.
+
+\subsection{Types of non-commercial traders}
+ Tables
+The results of our robust regressions involving equation \ref{eq:Model 1} (i.e., with financialization variables NLS for Money Managers and Swap Dealers) are presented in tables  \ref{tab:robut1} (crude oil), \ref{tab:robust2} (gold), \ref{tab:robust3} (copper), \ref{tab:robust4} (natural gas), \ref{tab:robust5} (palladium) and \ref{tab:robust6} (silver), respectively.  
+ Subsequently, for the results concerning  variance, tables \ref{tab:robut1.b}, \ref{tab:robust2.b}, \ref{tab:robust3.b}, \ref{tab:robust4.b}, \ref{tab:robust5.b} and \ref{tab:robust6.b} present the results of our robust regressions involving equation \ref{eq:Variance} (i.e., with financialization variables NLS, Money Managers and Swap Dealers), for crude oil, gold, copper, natural gas, palladium and silver, respectively.
+%Regarding the results of the robust regressions
+ %\vspace{1cm}
+ 
+These additional results confirm our baseline findings obtained with the initial methodology. Moreover, by dividing financial traders into two groups, Money Managers and Swap Dealers, we provide additional support for the results in \citet{brunetti2016speculators}. Indeed, it seems that the phenomenon whereby financial traders reduce volatility by limiting hedging pressure is solely attributable to Money Managers. In contrast, our results suggest that swap dealers seem to worsen hedging pressure, which usually results in higher volatility.
+
+ %\vspace{1cm}
+ 
+This finding can be seen for crude oil in table \ref{tab:robut1}. For money managers, the  $\gamma_m$ coefficient is positive when significant while the  $\theta_m$ coefficient is negative when significant. These results further confirm the procyclical nature of crude oil, given a positive $\gamma_m$ coefficient for all announcements except Initial Jobless Claims. Since the $\gamma_m$ coefficient has the opposite sign of the $\theta_m$ coefficient, money managers contribute to lowering hedging pressure. For swap dealers,   the $\gamma_m$ and $\theta_m$ coefficients  have the identical sign.  Unlike  money managers, it appears that swap dealers worsen hedging pressure and may not contribute as much to improving liquidity in crude oil futures.  Table \ref{tab:robut1.b} provides more detail on money managers and swap dealers. In column (a), the coefficient is negative when significant, while in column (b) the coefficient is positive when significant. Thus, trading by money managers appears to lower hedging pressure and volatility, while swap dealer trading seems to worsen hedging pressure and increase volatility.%These results tell us that in addition to reducing hedging pressure during a macroeconomic announcement, money managers also seem to contribute to a reduction in volatility.  In contrast, swap dealers seem to worsen hedging pressure during a macroeconomic announcement and increase volatility as well. 
+%\vspace{1cm}
+
+The robust results we have presented for crude oil are also valid for all other commodities in our sample except gold. The main explanation for the different behavior of gold is its safe haven attribute. Gold has attributes of a currency,  commodity, and safe asset for risk aversion \citep{wu2019does}. Prior research has focused more on the last attribute, as gold acts as safe haven in periods of economic uncertainty and market turmoil.  In particular, \citet{baur2010gold} describes the empirical observations that should be obtained for an asset class to be considered as a safe haven. For instance, asset returns should be uncorrelated or negatively correlated with other asset returns, and this property should be valid only in times of market stress or turmoil. 
+
+%\vspace{1cm}
+%Now knowing this properties of gold, f
+Financial traders will be especially interested in going long in a gold futures contract in times of uncertainty or crisis. Indeed, figure 3~(a) shows that the number of long positions in gold futures contracts increases over time, while the number of short positions is generally constant and in very low proportion compared to other commodities. In contrast, in the case of non-financial traders, the distribution between long and short positions is fairly symmetrical. Given the large proportion of gold futures long positions held at all times by financial traders, the following two outcomes could occur:
+%QUELQUE CHOSE PAS CLAIR DANS CE PARAGRAPHE. RECONCILIER GOING LONG IN CRISIS TIME AVEC GOING LONG POSITIONS INCREASING OVER TIME . ET RECONCILIER BEAUCOUP DE LONG AND FEWER SHORT (CA DOIT ETRE EGAL)
+
+\begin{itemize}
+\item When non-financial traders are mostly long in  gold futures, financial traders will worsen  hedging pressure  and thus cause increased volatility;
+\item When non-financial traders are mostly in short positions in gold futures, they will be in the opposed position to financial traders, which should result in a decrease in hedging pressure and a decrease in volatility.
+\end{itemize}
+
+
+\subsection{Discussion of the results}%ICI IL Y A DES REFERENCES QUI DOIVENT ETRE MISES EN BIB TEXformat
+%GOLDSTEIN C'EST PAS EVIDENCE C;EST UN MODEL
+Our results are consistent with the model presented in \citet{goldstein2019commodity}, and provide a more detailed explanation for their theoretical predictions.\footnote{\citet{goldstein2019commodity} use as a starting point the theories proposed by Grossman and Stiglitz (1980), Kyle (1985), Glosten and Milgrom (1985), to model better understand how information can be incorporated into the price of financial assets.} 
+%, but also provide a more detailed explanation for the phenomenon documented in their research, 
+Their model involves asymmetric information whereby financial traders, commodity producers, and noise traders trade futures contracts. Their results show, first, that financial traders bring in new information when they enter  commodity futures markets. They also  show that the presence of financial traders can improve price accuracy measured in terms of precision, i.e., as a function of price variance (precision is represented simply as the inverse of variance). The lower the variance, the higher the precision.\footnote{To compare our results with their predictions, note that price  precision can be expressed as a function of price  variance. The more the values of the price of an asset are scattered around the average (high variance), the less precise they are (low precision).  The lower the variance, the higher the precision. The precision represented by $\tau$ is simply the inverse of the variance: $\tau=\frac{1}{\tau}$ .} However, in some circumstances, they can make the situation worse. They conclude that financial traders also introduce noise with the new information. The improvement in price accuracy due to the new information brought by financial traders will dominate the loss of accuracy caused by noise when the proportion of financial traders remains relatively small compared to commercial traders. Thus, an increase in the proportion of financial traders up to a threshold point (around 20\%) will increase the accuracy of commodity futures prices equivalent to a reduction in volatility. When the proportion of financial traders passes the threshold, the noise introduced by financial traders becomes more important and dominant than the new information brought in.
+In their model, financial traders are all the same and the loss of accuracy past the threshold is caused by too large a proportion of financial trader positions compared to commercial trader positions. 
+
+However, our results provide further depth to understand their model by considering the different types of traders included in the broader financial trader category, as they do not have the same level of risk aversion, the same objectives or the same regulatory restrictions. Our results suggest that if financial traders were composed solely of money managers, an increase in the proportion of financial traders past the threshold point would continue to improve price accuracy and thereby reduce volatility. On the other hand, if financial traders were composed only of swap dealers, we would have a less accurate and more volatile price, whether the level of financial traders passed the threshold point or not. Overall, our results suggest that the loss of accuracy or the increase in volatility is not necessarily due to an excessively high concentration of financial traders, but rather to the type of traders included in the financial trader category.
+
+%A REVOIR.... The fact that the precision of the price past the threshold point does not decrease to the level before the threshold point is consistent with our result showing that globally financialization reduces volatility following a macroeconomic announcement . In other words , price accuracy will still be better past the threshold point compared to a situation where we have no financial traders and just commercial traders.
+
+As with \citet{brunetti2009speculation}, this first result relies on a proxy for financialization that includes all financial investors. It is still possible for a specific class of trader to implement trading strategies that move prices and increase volatility. Knowing this, our results imply that financialization as a whole reduces volatility when there is a macro announcement. We interpret this result as indicating that commodity markets are better informed–-and macro news create less of a shock–-when they are financialized, which should be beneficial for traditional commodity market participants. Subsequently, we examine the impact of different types of traders by breaking down the data. We find that money managers seem to contribute to price discovery when there is a macro announcement, while helping to reduce volatility. This result is consistent with the fact that money managers are more informed investors given their function in the markets. On the other hand, swap dealers also contribute to price discovery while causing an increase in volatility following macroeconomic announcements. Our second result is consistent with \citet{cheng2012convective}, who show that fund managers are clearly more sensitive to market information and fill hedgers’ liquidity needs by taking the opposite position. This result is also consistent with  \citet{goldstein2014speculation} who show that financial speculators improve price informativeness, while hedgers decrease it. Finally, all the results obtained are robust to the use of a non-parametric variance estimator. 
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion} \label{sec:conclusion}
+ This paper investigates whether financialization has amplified the impact of macro announcements on prices or volatility in commodity markets. our results suggest that financialization is beneficial to commodity markets, by reducing volatility and improving price discovery. Financialization does not appear to amplify macro announcement releases effects. In fact, volatility fluctuations are mitigated after macro releases when there is greater financialization. Our results are consistent with literature suggesting that non-traditional investors such as hedge funds are beneficial to commodity markets by supplying liquidity, reducing volatility, and improving market efficiency. Our results are robust to the use of a non-parametric variance estimator and to alternative empirical specification.
+This paper, and the recent body of research showing a decrease in volatility related to financialization, suggest that financialized commodity markets may contribute to sustainability in energy, alongside other instruments such as green bonds and portfolio screens for sustainable investments.
+
+\newpage
+\bibliography{master}
+\section{Tables}
+\include{table}
+
+\end{document}

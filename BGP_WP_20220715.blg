@@ -1,0 +1,80 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: BGP_WP_20220715.aux
+The style file: aaai-named.bst
+A level-1 auxiliary file: table.aux
+A level-1 auxiliary file: fig.aux
+Database file #1: master.bib
+Repeated entry---line 567 of file master.bib
+ : @article{irwin2012financialization
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 653 of file master.bib
+ : @article{cai2001moves
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 705 of file master.bib
+ : @article{hammoudeh2008metal
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 823 of file master.bib
+ : @article{irwin2012testing
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 846 of file master.bib
+ : @article{irwin2012testing
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 955 of file master.bib
+ : @article{kilian2014role
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1077 of file master.bib
+ : @article{bryant2006causality
+ :                             ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in buyukcsahin2010matters
+Warning--there's a number but no series in goldstein2019commodity
+Warning--empty journal in irwin2004effect
+You've used 66 entries,
+            2447 wiz_defined-function locations,
+            927 strings with 14925 characters,
+and the built_in function-call counts, 25537 in all, are:
+= -- 2741
+> -- 1002
+< -- 4
++ -- 337
+- -- 324
+* -- 2138
+:= -- 4159
+add.period$ -- 199
+call.type$ -- 66
+change.case$ -- 427
+chr.to.int$ -- 65
+cite$ -- 69
+duplicate$ -- 948
+empty$ -- 1873
+format.name$ -- 420
+if$ -- 5159
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 65
+newline$ -- 333
+num.names$ -- 198
+pop$ -- 268
+preamble$ -- 1
+purify$ -- 492
+quote$ -- 0
+skip$ -- 788
+stack$ -- 0
+substring$ -- 1606
+swap$ -- 158
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 528
+warning$ -- 3
+while$ -- 237
+width$ -- 71
+write$ -- 852
+(There were 7 error messages)

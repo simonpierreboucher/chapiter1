@@ -1,0 +1,89 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: BGP_WP_20220715_gp.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apalike.bst
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+A level-1 auxiliary file: table.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+A level-1 auxiliary file: fig.aux
+Database file #1: master.bib
+You're missing a field name---line 117 of file master.bib
+ : 
+ : %  title={Volatility spillovers arising from the financialization of commodities},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 567 of file master.bib
+ : @article{irwin2012financialization
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 653 of file master.bib
+ : @article{cai2001moves
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 705 of file master.bib
+ : @article{hammoudeh2008metal
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 823 of file master.bib
+ : @article{irwin2012testing
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 846 of file master.bib
+ : @article{irwin2012testing
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 955 of file master.bib
+ : @article{kilian2014role
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1077 of file master.bib
+ : @article{bryant2006causality
+ :                             ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in buyukcsahin2010matters
+Warning--there's a number but no series in goldstein2019commodity
+Warning--empty journal in irwin2004effect
+You've used 68 entries,
+            1935 wiz_defined-function locations,
+            853 strings with 14259 characters,
+and the built_in function-call counts, 27076 in all, are:
+= -- 2727
+> -- 1016
+< -- 42
++ -- 355
+- -- 328
+* -- 2392
+:= -- 4669
+add.period$ -- 203
+call.type$ -- 68
+change.case$ -- 505
+chr.to.int$ -- 67
+cite$ -- 71
+duplicate$ -- 979
+empty$ -- 1928
+format.name$ -- 456
+if$ -- 5241
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 67
+newline$ -- 341
+num.names$ -- 204
+pop$ -- 373
+preamble$ -- 1
+purify$ -- 504
+quote$ -- 0
+skip$ -- 748
+stack$ -- 0
+substring$ -- 2162
+swap$ -- 91
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 408
+warning$ -- 3
+while$ -- 245
+width$ -- 0
+write$ -- 876
+(There were 8 error messages)

@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: BGP_WP_20220707.aux
+The style file: aaai-named.bst
+A level-1 auxiliary file: table.aux
+Database file #1: master.bib
+Repeated entry---line 567 of file master.bib
+ : @article{irwin2012financialization
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 653 of file master.bib
+ : @article{cai2001moves
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 705 of file master.bib
+ : @article{hammoudeh2008metal
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 823 of file master.bib
+ : @article{irwin2012testing
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 846 of file master.bib
+ : @article{irwin2012testing
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 955 of file master.bib
+ : @article{kilian2014role
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1077 of file master.bib
+ : @article{bryant2006causality
+ :                             ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in buyukcsahin2010matters
+Warning--there's a number but no series in goldstein2019commodity
+Warning--empty journal in irwin2004effect
+You've used 65 entries,
+            2447 wiz_defined-function locations,
+            921 strings with 14776 characters,
+and the built_in function-call counts, 25165 in all, are:
+= -- 2700
+> -- 989
+< -- 4
++ -- 333
+- -- 320
+* -- 2106
+:= -- 4099
+add.period$ -- 196
+call.type$ -- 65
+change.case$ -- 421
+chr.to.int$ -- 64
+cite$ -- 68
+duplicate$ -- 934
+empty$ -- 1845
+format.name$ -- 414
+if$ -- 5084
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 64
+newline$ -- 328
+num.names$ -- 195
+pop$ -- 265
+preamble$ -- 1
+purify$ -- 485
+quote$ -- 0
+skip$ -- 776
+stack$ -- 0
+substring$ -- 1582
+swap$ -- 156
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 520
+warning$ -- 3
+while$ -- 233
+width$ -- 70
+write$ -- 839
+(There were 7 error messages)
